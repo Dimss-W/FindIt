@@ -1,4 +1,4 @@
-# 🔍 FINDIT UBSI — Sistem Informasi Lost & Found Multi-Kampus
+# FINDIT UBSI — Sistem Informasi Lost & Found Multi-Kampus
 
 <p align="center">
   <img src="public/images/logo-ubsi.png" alt="Logo UBSI" width="120" style="margin-bottom: 10px;" onerror="this.style.display='none'">
@@ -17,35 +17,35 @@
 
 ---
 
-## 📖 Tentang Aplikasi
+## Tentang Aplikasi
 
 **FINDIT UBSI** adalah sistem informasi berbasis web responsif dan *Progressive Web App (PWA)* yang dirancang untuk membantu mahasiswa dan petugas kampus Universitas Bina Sarana Informatika dalam mencatat, mencari, mencocokkan, dan mengembalikan barang hilang maupun barang temuan secara transparan, aman, dan terstruktur di seluruh cabang kampus UBSI.
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
-### 1. 🎓 Akses Mahasiswa
+### 1. Akses Mahasiswa
 - **Lapor Barang Hilang & Ditemukan**: Form pelaporan dengan upload multi-foto, rincian lokasi, waktu, dan ciri-ciri khusus.
 - **Pencarian Cerdas & Filter Kampus**: Cari barang berdasarkan kategori, nama, atau lokasi kampus UBSI tertentu.
 - **Klaim Barang Temuan & QR Tiket**: Ajukan verifikasi kepemilikan dan dapatkan QR Code Tiket Klaim resmi.
 - **Notifikasi Terintegrasi**: Pemberitahuan status klaim dan rekomendasi kecocokan barang secara real-time.
 - **PWA Mobile Installable**: Dapat diinstal di layar utama smartphone Android layaknya aplikasi native.
 
-### 2. 🛡️ Portal Layanan Kampus (Petugas / Security)
+### 2. Portal Layanan Kampus (Petugas / Security)
 - **Inventaris Hub All-in-One**: Manajemen barang menunggu verifikasi, barang diamankan di loker/pos, dan laporan kehilangan.
 - **Pemindai QR Code Tiket**: Scan QR Code mahasiswa untuk validasi identitas dan serah terima seketika.
 - **Cetak BAST Resmi Standar DINAS A4**: Berita Acara Serah Terima Barang lengkap dengan Kop Surat resmi Yayasan Bina Sarana Informatika / UBSI.
 - **Aturan Masa Simpan & Donasi (> 90 Hari)**: Peringatan otomatis untuk barang tak bertuan yang tersimpan lebih dari 90 hari, lengkap dengan tombol alokasi donasi sosial kampus.
 - **Notifikasi WhatsApp Otomatis & One-Click Chat (`wa.me`)**: Kirim informasi tiket klaim dan bukti serah terima langsung ke kontak WA mahasiswa.
 
-### 3. ⚙️ Portal Admin Universitas
+### 3. Portal Admin Universitas
 - **Master Data**: Pengelolaan data multi-kampus UBSI, kategori barang, dan staf petugas kampus.
 - **Import Data Mahasiswa Excel**: Template 5 kolom (Nama, NIM, Tanggal Lahir YYYY-MM-DD, Kampus, No WhatsApp) berdesain bersih (*Clean Navy Template*).
 - **Format Password Default**: Password mahasiswa otomatis mengikuti format tanggal lahir `YYYY-MM-DD`.
 - **Statistik & Audit Log**: Monitoring efektivitas pengembalian barang dan pelaporan aktivitas.
 
-### 4. ⚡ Algoritma Smart Matching
+### 4. Algoritma Smart Matching
 Sistem menghitung persentase kemiripan laporan kehilangan vs temuan dengan bobot terukur:
 - Kampus: **30%**
 - Kategori Barang: **20%**
@@ -55,7 +55,7 @@ Sistem menghitung persentase kemiripan laporan kehilangan vs temuan dengan bobot
 
 ---
 
-## 🛠️ Kebutuhan Sistem (Prerequisites)
+## Kebutuhan Sistem (Prerequisites)
 
 - **PHP**: $\ge$ 8.1
 - **Composer**: $\ge$ 2.x
@@ -64,7 +64,7 @@ Sistem menghitung persentase kemiripan laporan kehilangan vs temuan dengan bobot
 
 ---
 
-## 🚀 Panduan Instalasi Langkah demi Langkah
+## Panduan Instalasi Langkah demi Langkah
 
 ### 1. Clone Repository
 ```bash
@@ -117,7 +117,7 @@ Akses aplikasi melalui browser di: **`http://127.0.0.1:8000`** atau virtual host
 
 ---
 
-## 🔑 Akun Demo Pengujian
+## Akun Demo Pengujian
 
 Semua akun default telah disiapkan melalui Seeder untuk memudahkan pengujian:
 
@@ -125,16 +125,16 @@ Semua akun default telah disiapkan melalui Seeder untuk memudahkan pengujian:
 | :--- | :--- | :--- | :--- |
 | **Admin** | `admin@findit.ubsi.ac.id` | `password` | Administrator Universitas |
 | **Petugas** | `petugas.cengkareng@ubsi.ac.id` | `password` | Petugas UBSI Cengkareng |
-| **Mahasiswa** | `19230181` | `2004-04-21` | Dimas Wijanarko (Cengkareng) |
+| **Mahasiswa** | `12210181` | `2004-09-20` | Dika Fathur (Cengkareng) |
 | **Mahasiswa** | `12220199` | `2004-05-14` | Dimas Arya Pratama (Kramat 98) |
 | **Mahasiswa** | `12220340` | `2004-08-20` | Annisa Putri (Margonda) |
 | **Mahasiswa** | `12220551` | `2003-12-05` | Rizky Fauzi (Salemba 22) |
 
-> 💡 *Catatan: Mahasiswa login menggunakan **NIM** dengan password format tanggal lahir **`YYYY-MM-DD`**.*
+> *Catatan: Mahasiswa login menggunakan **NIM** dengan password format tanggal lahir **`YYYY-MM-DD`**.*
 
 ---
 
-## 🧪 Menjalankan Pengujian (Testing)
+## Menjalankan Pengujian (Testing)
 
 Aplikasi dilengkapi test suite PHPUnit untuk memastikan seluruh endpoint, autentikasi, PWA manifest, template Excel, dan logika WhatsApp berfungsi optimal:
 
@@ -150,7 +150,7 @@ Status:   100% PASSING
 
 ---
 
-## 📂 Struktur Direktori Utama
+## Struktur Direktori Utama
 
 ```
 findit/
@@ -172,7 +172,7 @@ findit/
 
 ---
 
-## 📄 Lisensi & Kontribusi
+## Lisensi & Kontribusi
 
 Dikembangkan untuk kebutuhan operasional layanan kemahasiswaan **Universitas Bina Sarana Informatika (UBSI)**.
 Hak Cipta © 2026 FINDIT UBSI.
