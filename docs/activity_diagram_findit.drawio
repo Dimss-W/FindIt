@@ -1,0 +1,823 @@
+<mxfile host="app.diagrams.net" agent="Antigravity-FINDIT-Pro" pages="3">
+  <diagram id="diag_e2e" name="1. Activity Diagram End-to-End">
+    <mxGraphModel dx="963" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="2750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane_mhs" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#1E3A8A;strokeColor=#3B82F6;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#F8FAFC;" value="MAHASISWA / PENGGUNA (Pelapor &amp; Pemilik Sah)" vertex="1">
+          <mxGeometry height="2480" width="360" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_serah_fisik" parent="lane_mhs" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Bawa &amp; Serahkan Fisik Barang ke Pos Satpam / Layanan Kampus" vertex="1">
+          <mxGeometry height="50" width="200" x="110" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="act_lapor_t" parent="lane_mhs" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Pilih Menu &quot;Lapor Temuan&quot; Isi Form Detail &amp; Upload Min. 2 Foto" vertex="1">
+          <mxGeometry height="55" width="200" x="80" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="act_lapor_h" parent="lane_mhs" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Pilih Menu &quot;Lapor Hilang&quot; Isi Rincian, Ciri Khusus, &amp; Lokasi" vertex="1">
+          <mxGeometry height="55" width="180" x="110" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="end_success" parent="lane_mhs" style="ellipse;html=1;shape=endState;fillColor=#0F172A;strokeColor=#EF4444;strokeWidth=3;" vertex="1">
+          <mxGeometry height="30" width="30" x="165" y="2370" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_sys" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#5B21B6;strokeColor=#7C3AED;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#FAF5FF;" value="SISTEM FINDIT (Platform, Matching &amp; Keamanan)" vertex="1">
+          <mxGeometry height="2480" width="440" x="420" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_simpan_t" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Validasi Form, Generate Kode FD Status: MENUNGGU VERIFIKASI" vertex="1">
+          <mxGeometry height="55" width="210" x="115" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="act_notif_tolak" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Update Status Klaim: DITOLAK Kirim Notifikasi Penolakan" vertex="1">
+          <mxGeometry height="50" width="200" x="120" y="1365" as="geometry" />
+        </mxCell>
+        <mxCell id="doc_tiket" parent="lane_sys" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.2;fillColor=#FFFBEB;strokeColor=#F59E0B;strokeWidth=1.5;fontColor=#78350F;fontFamily=Segoe UI;fontSize=10;fontStyle=1;shadow=1;" value="Tiket QR Code Pengambilan" vertex="1">
+          <mxGeometry height="65" width="85" x="10" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="act_gen_tiket" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Update: DISETUJUI &amp; SIAP DIAMBIL Generate Tiket &amp; Token QR Unik" vertex="1">
+          <mxGeometry height="55" width="220" x="150" y="1445" as="geometry" />
+        </mxCell>
+        <mxCell id="e32" edge="1" parent="lane_sys" source="act_gen_tiket" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="doc_tiket">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_notif_tiket" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Tiket Terbit ke Mahasiswa" vertex="1">
+          <mxGeometry height="50" width="220" x="150" y="1530" as="geometry" />
+        </mxCell>
+        <mxCell id="e33" edge="1" parent="lane_sys" source="act_gen_tiket" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_notif_tiket">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_val_qr" parent="lane_sys" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;" value="Tiket Valid &amp; Lolos?" vertex="1">
+          <mxGeometry height="65" width="90" x="230" y="1780" as="geometry" />
+        </mxCell>
+        <mxCell id="act_show_modal" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Tampilkan Modal Verifikasi Lengkap (Identitas Mahasiswa, Foto, Bukti)" vertex="1">
+          <mxGeometry height="55" width="210" x="170" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="e40" edge="1" parent="lane_sys" source="dec_val_qr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="act_show_modal" value="[Lolos]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="275" y="1870" />
+              <mxPoint x="275" y="1870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="doc_bast" parent="lane_sys" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.2;fillColor=#FFFBEB;strokeColor=#F59E0B;strokeWidth=1.5;fontColor=#78350F;fontFamily=Segoe UI;fontSize=10;fontStyle=1;shadow=1;" value="Dokumen BAST Resmi Kampus" vertex="1">
+          <mxGeometry height="65" width="85" x="15" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_stf" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#065F46;strokeColor=#059669;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#F0FDF4;" value="PETUGAS LAYANAN KAMPUS (Satpam &amp; Staf Inventaris)" vertex="1">
+          <mxGeometry height="2480" width="360" x="880" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_klaim" parent="lane_stf" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;" value="Bukti Sah &amp; Sesuai?" vertex="1">
+          <mxGeometry height="65" width="90" x="190" y="1303" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tolak_klaim" parent="lane_stf" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Tolak Klaim Mahasiswa &amp; Beri Catatan Alasan Penolakan" vertex="1">
+          <mxGeometry height="55" width="100" x="20" y="1308" as="geometry" />
+        </mxCell>
+        <mxCell id="e27" edge="1" parent="lane_stf" source="dec_klaim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_tolak_klaim" value="[Tidak Sah]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_setuju_klaim" parent="lane_stf" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Klik &quot;Setujui Klaim&quot; Input Catatan Pengambilan" vertex="1">
+          <mxGeometry height="50" width="220" x="125" y="1445" as="geometry" />
+        </mxCell>
+        <mxCell id="e30" edge="1" parent="lane_stf" source="dec_klaim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_setuju_klaim" value="[Sah &amp; Identik]">
+          <mxGeometry relative="1" x="0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act_review_klaim" parent="lane_stf" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Buka Antrean Klaim di Sistem &amp; Cocokkan Bukti dgn Fisik Loker" vertex="1">
+          <mxGeometry height="50" width="220" x="125" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="lane_stf" source="act_review_klaim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="dec_klaim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="start_1" parent="1" style="ellipse;html=1;shape=startState;fillColor=#0F172A;strokeColor=#334155;strokeWidth=2;" vertex="1">
+          <mxGeometry height="30" width="30" x="205" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="act_login" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Akses Web &amp; Masukkan Akun (Form Login / Registrasi Baru)" vertex="1">
+          <mxGeometry height="50" width="220" x="110" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="act_auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Validasi Kredensial Pengguna &amp; Identifikasi Role Akun" vertex="1">
+          <mxGeometry height="50" width="220" x="530" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_auth" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;" value="Kredensial&amp;nbsp;&lt;div&gt;Valid?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="65" width="90" x="595" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="act_dash" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Tampilkan Dashboard Sesuai Role (Mahasiswa / Petugas / Admin)" vertex="1">
+          <mxGeometry height="50" width="220" x="530" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="fork_main" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#0F172A;arcSize=50;" vertex="1">
+          <mxGeometry height="8" width="240" x="100" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="act_terima_fisik" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Terima Barang &amp; Cek Kesesuaian Buka Form Verifikasi Fisik" vertex="1">
+          <mxGeometry height="50" width="220" x="950" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="act_input_simpan" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Catat Nomor Loker/Rak Inventaris, Kondisi Fisik, &amp; Catatan Keamanan" vertex="1">
+          <mxGeometry height="55" width="220" x="950" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="act_update_aman" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Simpan di PenyimpananBarang Update: BARANG DIAMANKAN" vertex="1">
+          <mxGeometry height="55" width="220" x="530" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="act_simpan_h" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Simpan Data Laporan Kehilangan Status: SEDANG DICARI" vertex="1">
+          <mxGeometry height="55" width="200" x="460" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="act_match" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Jalankan SmartMatchingService: Hitung Kesesuaian Teks &amp; Ciri" vertex="1">
+          <mxGeometry height="55" width="220" x="530" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_match" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;" value="Skor Cocok &gt;= 50% ?" vertex="1">
+          <mxGeometry height="65" width="90" x="595" y="875" as="geometry" />
+        </mxCell>
+        <mxCell id="act_notif_match" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Otomatis: &quot;Ada Barang Berpotensi Cocok&quot;" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="join_find" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#0F172A;arcSize=50;" vertex="1">
+          <mxGeometry height="8" width="220" x="110" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="act_cari" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Buka Pencarian / Notifikasi &amp; Tinjau Detail Barang Diamankan" vertex="1">
+          <mxGeometry height="50" width="220" x="110" y="1075" as="geometry" />
+        </mxCell>
+        <mxCell id="act_isi_klaim" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Klik &quot;Ajukan Klaim&quot;: Isi Bukti Detail, Nomor Seri/Nota, &amp; Foto" vertex="1">
+          <mxGeometry height="55" width="220" x="110" y="1155" as="geometry" />
+        </mxCell>
+        <mxCell id="act_simpan_klaim" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Simpan Pengajuan Klaim Status: MENUNGGU VERIFIKASI" vertex="1">
+          <mxGeometry height="55" width="220" x="530" y="1155" as="geometry" />
+        </mxCell>
+        <mxCell id="act_notif_stf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Klaim Baru ke Petugas Kampus Terkait" vertex="1">
+          <mxGeometry height="50" width="220" x="530" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="end_tolak" parent="1" style="ellipse;html=1;shape=endState;fillColor=#0F172A;strokeColor=#EF4444;strokeWidth=3;" vertex="1">
+          <mxGeometry height="30" width="30" x="209" y="1415" as="geometry" />
+        </mxCell>
+        <mxCell id="act_bawa_qr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Buka Tiket QR di Smartphone Datang ke Layanan Membawa KTM Asli" vertex="1">
+          <mxGeometry height="55" width="220" x="110" y="1650" as="geometry" />
+        </mxCell>
+        <mxCell id="act_scan_qr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Buka Menu &quot;Scan QR Serah Terima&quot; Arahkan Kamera ke QR Code" vertex="1">
+          <mxGeometry height="55" width="220" x="950" y="1650" as="geometry" />
+        </mxCell>
+        <mxCell id="act_val_qr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Validasi Token QR via AJAX: Cek Status, Unit Kampus &amp; Klaim Ganda" vertex="1">
+          <mxGeometry height="55" width="220" x="530" y="1735" as="geometry" />
+        </mxCell>
+        <mxCell id="act_err_qr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Tampilkan Peringatan Error (Akses Ditolak / Sudah Diambil)" vertex="1">
+          <mxGeometry height="55" width="140" x="440" y="1825" as="geometry" />
+        </mxCell>
+        <mxCell id="act_serah_cek" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Cocokkan KTM Asli dgn Layar, Ambil Foto Dokumentasi Serah Terima" vertex="1">
+          <mxGeometry height="55" width="220" x="950" y="1985" as="geometry" />
+        </mxCell>
+        <mxCell id="act_submit_serah" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Klik &quot;Konfirmasi Serah Terima&quot;" vertex="1">
+          <mxGeometry height="45" width="220" x="950" y="2065" as="geometry" />
+        </mxCell>
+        <mxCell id="act_proses_bast" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="1. Generate Nomor BAST Resmi 2. Simpan Riwayat Pengembalian 3. Update Status: DIKEMBALIKAN" vertex="1">
+          <mxGeometry height="65" width="240" x="520" y="2135" as="geometry" />
+        </mxCell>
+        <mxCell id="act_notif_selesai" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Berhasil Serah Terima ke Akun Mahasiswa" vertex="1">
+          <mxGeometry height="50" width="220" x="530" y="2230" as="geometry" />
+        </mxCell>
+        <mxCell id="act_cetak_bast" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Cetak / Unduh Dokumen Berita Acara sebagai Arsip Resmi Kampus" vertex="1">
+          <mxGeometry height="50" width="220" x="950" y="2230" as="geometry" />
+        </mxCell>
+        <mxCell id="act_terima_barang" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Terima Barang Milik Kembali &amp; Cek Status Selesai di Aktivitas" vertex="1">
+          <mxGeometry height="50" width="220" x="110" y="2310" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="act_login" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_auth" value="Kirim Data Akun">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="act_auth" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="dec_auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="dec_auth" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="act_login" value="[Tidak Valid]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="262.51" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="dec_auth" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_dash" value="[Valid]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="act_dash" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="fork_main" value="Masuk Dashboard">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="385" />
+              <mxPoint x="220" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="fork_main" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_lapor_t" value="Temukan Barang">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="408" />
+              <mxPoint x="160" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="act_lapor_t" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_simpan_t" value="Submit Laporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="act_simpan_t" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="act_serah_fisik" value="Instruksi Serah Fisik">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="540.06" />
+              <mxPoint x="250" y="540.06" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="act_serah_fisik" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_terima_fisik" value="Serahkan Fisik">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="act_terima_fisik" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_input_simpan" value="Fisik Sesuai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="act_input_simpan" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_update_aman" value="Konfirmasi Simpan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="act_update_aman" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_match" value="Cek Kecocokan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="730" />
+              <mxPoint x="700" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="act_lapor_h" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_simpan_h" value="Submit Laporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="act_simpan_h" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_match" value="Cek Kecocokan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="755" />
+              <mxPoint x="640" y="755" />
+              <mxPoint x="640" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="act_match" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="dec_match">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="dec_match" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="act_notif_match" value="[Skor &gt;= 50%]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560.01" y="907.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="dec_match" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="join_find" value="[Skor &lt; 50%]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="907" />
+              <mxPoint x="720" y="907" />
+              <mxPoint x="720" y="1030" />
+              <mxPoint x="220" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="act_notif_match" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="join_find">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="1025" />
+              <mxPoint x="220" y="1025" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="join_find" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_cari">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="act_cari" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_isi_klaim" value="Barang Ditemukan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="act_isi_klaim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_simpan_klaim" value="Submit Klaim &amp; Bukti">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="act_simpan_klaim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_notif_stf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="act_notif_stf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_review_klaim" value="Teruskan Klaim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e28" edge="1" parent="1" source="act_tolak_klaim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_notif_tolak" value="Tolak">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="938" y="1430.06" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" edge="1" parent="1" source="act_notif_tolak" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="end_tolak" value="Notifikasi Penolakan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e31" edge="1" parent="1" source="act_setuju_klaim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_gen_tiket" value="Konfirmasi Setuju">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e34" edge="1" parent="1" source="act_notif_tiket" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_bawa_qr" value="Tiket Terbit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="1595" />
+              <mxPoint x="220" y="1595" />
+              <mxPoint x="220" y="1650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" edge="1" parent="1" source="act_bawa_qr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="act_scan_qr" value="Tunjukkan QR Code">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="1677.54" />
+              <mxPoint x="490" y="1640" />
+              <mxPoint x="1060" y="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36" edge="1" parent="1" source="act_scan_qr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="act_val_qr" value="Kirim Token QR">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="1715" />
+              <mxPoint x="640" y="1715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" edge="1" parent="1" source="act_val_qr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="dec_val_qr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="1762.54" />
+              <mxPoint x="760" y="1810" />
+              <mxPoint x="695" y="1810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38" edge="1" parent="1" source="dec_val_qr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_err_qr" value="[Gagal]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e39" edge="1" parent="1" source="act_err_qr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="act_scan_qr" value="Scan Ulang">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="1677.54" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41" edge="1" parent="1" source="act_show_modal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_serah_cek" value="Kirim Data Verifikasi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="765" y="1960" />
+              <mxPoint x="1060" y="1960" />
+              <mxPoint x="1060" y="1985" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42" edge="1" parent="1" source="act_serah_cek" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_submit_serah" value="Dokumentasi Lengkap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e43" edge="1" parent="1" source="act_submit_serah" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_proses_bast" value="Konfirmasi Penyerahan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="2087" />
+              <mxPoint x="640" y="2087" />
+              <mxPoint x="640" y="2135" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e44" edge="1" parent="1" source="act_proses_bast" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="doc_bast">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e45" edge="1" parent="1" source="act_proses_bast" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_notif_selesai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e46" edge="1" parent="1" source="act_proses_bast" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_cetak_bast" value="Terbitkan BAST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="2167" />
+              <mxPoint x="1060" y="2167" />
+              <mxPoint x="1060" y="2230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e47" edge="1" parent="1" source="act_notif_selesai" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="act_terima_barang" value="Notifikasi Sukses">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="2255" />
+              <mxPoint x="220" y="2255" />
+              <mxPoint x="220" y="2310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e48" edge="1" parent="1" source="act_terima_barang" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" target="end_success" value="Barang Kembali">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="fork_main" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="act_lapor_h" value="Kehilangan Barang">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="430" />
+              <mxPoint x="100" y="430" />
+              <mxPoint x="100" y="727.5" />
+            </Array>
+            <mxPoint x="100" y="583" as="sourcePoint" />
+            <mxPoint x="140" y="875" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_lapor" name="2. Alur Pelaporan &amp; Pengamanan">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="1450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l2_mhs" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#1E3A8A;strokeColor=#3B82F6;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#F8FAFC;" value="MAHASISWA (Pelapor)" vertex="1">
+          <mxGeometry as="geometry" x="40" y="40" width="360" height="1350" />
+        </mxCell>
+        <mxCell id="l2_sys" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#5B21B6;strokeColor=#7C3AED;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#FAF5FF;" value="SISTEM FINDIT (UBSI)" vertex="1">
+          <mxGeometry as="geometry" x="420" y="40" width="440" height="1350" />
+        </mxCell>
+        <mxCell id="l2_stf" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#065F46;strokeColor=#059669;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#F0FDF4;" value="PETUGAS LAYANAN KAMPUS" vertex="1">
+          <mxGeometry as="geometry" x="880" y="40" width="360" height="1350" />
+        </mxCell>
+        <mxCell id="t2_start" parent="1" style="ellipse;html=1;shape=startState;fillColor=#0F172A;strokeColor=#334155;strokeWidth=2;" vertex="1">
+          <mxGeometry as="geometry" x="205" y="95" width="30" height="30" />
+        </mxCell>
+        <mxCell id="t2_menu" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Akses Menu Pelaporan di Lapor Hub: Pilih &quot;Lapor Temuan&quot; atau &quot;Lapor Hilang&quot;" vertex="1">
+          <mxGeometry as="geometry" x="110" y="150" width="220" height="55" />
+        </mxCell>
+        <mxCell id="t2_dec_jenis" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;" value="Jenis Laporan?" vertex="1">
+          <mxGeometry as="geometry" x="175" y="235" width="90" height="65" />
+        </mxCell>
+        <mxCell id="t2_form_t" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Isi Formulir Lapor Temuan: - Kampus &amp; Kategori Barang - Nama, Waktu &amp; Lokasi Spesifik - Deskripsi &amp; Ciri Khusus - Wajib Upload Min. 2 Foto" vertex="1">
+          <mxGeometry as="geometry" x="60" y="335" width="190" height="95" />
+        </mxCell>
+        <mxCell id="t2_sys_val_t" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="1. Validasi Ukuran/Tipe Gambar 2. Buat Kode Unik FD-YYYY-XXXXX 3. Status: MENUNGGU VERIFIKASI" vertex="1">
+          <mxGeometry as="geometry" x="450" y="345" width="210" height="70" />
+        </mxCell>
+        <mxCell id="t2_notif_serah" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Instruksi ke Pelapor: &quot;Segera serahkan barang fisik ke petugas&quot;" vertex="1">
+          <mxGeometry as="geometry" x="450" y="445" width="210" height="50" />
+        </mxCell>
+        <mxCell id="t2_mhs_bawa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Bawa &amp; Serahkan Fisik Barang ke Ruang Staf / Satpam Kampus" vertex="1">
+          <mxGeometry as="geometry" x="60" y="480" width="190" height="55" />
+        </mxCell>
+        <mxCell id="t2_stf_cek" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Terima Fisik Barang &amp; Buka Menu Verifikasi di Sistem" vertex="1">
+          <mxGeometry as="geometry" x="950" y="480" width="220" height="55" />
+        </mxCell>
+        <mxCell id="t2_stf_input" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Input Rincian Fisik: - Nomor Loker / Rak Simpan - Kondisi Barang Saat Diterima - Catatan Fisik Tambahan" vertex="1">
+          <mxGeometry as="geometry" x="950" y="570" width="220" height="75" />
+        </mxCell>
+        <mxCell id="t2_sys_aman" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Catat ke PenyimpananBarang Update Status: BARANG DIAMANKAN" vertex="1">
+          <mxGeometry as="geometry" x="450" y="580" width="210" height="55" />
+        </mxCell>
+        <mxCell id="t2_form_h" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Isi Formulir Lapor Hilang: - Kampus, Kategori, Nama Barang - Lokasi Terakhir &amp; Waktu Kejadian - Ciri Khusus &amp; Foto (Opsional)" vertex="1">
+          <mxGeometry as="geometry" x="220" y="335" width="170" height="95" />
+        </mxCell>
+        <mxCell id="t2_sys_simpan_h" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Validasi &amp; Simpan Laporan Kehilangan Status: SEDANG DICARI" vertex="1">
+          <mxGeometry as="geometry" x="680" y="345" width="170" height="70" />
+        </mxCell>
+        <mxCell id="t2_smart_match" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Picu SmartMatchingService: Hitung Kesamaan Teks, Kategori, Kampus &amp; Analisis Kemiripan Ciri" vertex="1">
+          <mxGeometry as="geometry" x="530" y="690" width="220" height="65" />
+        </mxCell>
+        <mxCell id="t2_dec_skor" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;" value="Skor Cocok &gt;= 50%?" vertex="1">
+          <mxGeometry as="geometry" x="595" y="785" width="90" height="65" />
+        </mxCell>
+        <mxCell id="t2_kirim_notif" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Rekomendasi Cocok ke Akun Mahasiswa Pelapor Hilang" vertex="1">
+          <mxGeometry as="geometry" x="450" y="880" width="210" height="55" />
+        </mxCell>
+        <mxCell id="t2_status_cocok" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Perbarui Status Laporan Hilang: ADA KEMUNGKINAN COCOK" vertex="1">
+          <mxGeometry as="geometry" x="450" y="965" width="210" height="50" />
+        </mxCell>
+        <mxCell id="t2_mhs_pantau" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Mahasiswa Memantau Perkembangan di Pusat Aktivitas &amp; Notifikasi" vertex="1">
+          <mxGeometry as="geometry" x="110" y="1055" width="220" height="55" />
+        </mxCell>
+        <mxCell id="t2_end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#0F172A;strokeColor=#EF4444;strokeWidth=3;" vertex="1">
+          <mxGeometry as="geometry" x="205" y="1145" width="30" height="30" />
+        </mxCell>
+        <mxCell id="e2_1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t2_start" target="t2_menu">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_2" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t2_menu" target="t2_dec_jenis">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_3" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="[Barang Temuan]" edge="1" source="t2_dec_jenis" target="t2_form_t">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="155" y="267" />
+              <mxPoint x="155" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2_4" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="[Barang Hilang]" edge="1" source="t2_dec_jenis" target="t2_form_h">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="285" y="267" />
+              <mxPoint x="305" y="267" />
+              <mxPoint x="305" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2_5" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Submit Laporan" edge="1" source="t2_form_t" target="t2_sys_val_t">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_6" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t2_sys_val_t" target="t2_notif_serah">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_7" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Notifikasi" edge="1" source="t2_notif_serah" target="t2_mhs_bawa">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="450" y="470" />
+              <mxPoint x="155" y="470" />
+              <mxPoint x="155" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2_8" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Serahkan Fisik" edge="1" source="t2_mhs_bawa" target="t2_stf_cek">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_9" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t2_stf_cek" target="t2_stf_input">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_10" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Simpan Data Fisik" edge="1" source="t2_stf_input" target="t2_sys_aman">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_11" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Cek Matching" edge="1" source="t2_sys_aman" target="t2_smart_match">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="555" y="635" />
+              <mxPoint x="640" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2_12" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Submit Laporan" edge="1" source="t2_form_h" target="t2_sys_simpan_h">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_13" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Cek Matching" edge="1" source="t2_sys_simpan_h" target="t2_smart_match">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="765" y="415" />
+              <mxPoint x="765" y="660" />
+              <mxPoint x="640" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2_14" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t2_smart_match" target="t2_dec_skor">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_15" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="[Ya]" edge="1" source="t2_dec_skor" target="t2_kirim_notif">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_16" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="[Tidak]" edge="1" source="t2_dec_skor" target="t2_mhs_pantau">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="685" y="817" />
+              <mxPoint x="770" y="817" />
+              <mxPoint x="770" y="1030" />
+              <mxPoint x="220" y="1030" />
+              <mxPoint x="220" y="1055" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2_17" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t2_kirim_notif" target="t2_status_cocok">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2_18" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t2_status_cocok" target="t2_mhs_pantau">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="555" y="990" />
+              <mxPoint x="220" y="990" />
+              <mxPoint x="220" y="1055" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2_19" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Selesai" edge="1" source="t2_mhs_pantau" target="t2_end">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_klaim" name="3. Alur Klaim &amp; Serah Terima BAST">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l3_mhs" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#1E3A8A;strokeColor=#3B82F6;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#F8FAFC;" value="MAHASISWA (Pemilik Sah)" vertex="1">
+          <mxGeometry as="geometry" x="40" y="40" width="360" height="1580" />
+        </mxCell>
+        <mxCell id="l3_sys" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#5B21B6;strokeColor=#7C3AED;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#FAF5FF;" value="SISTEM FINDIT (UBSI)" vertex="1">
+          <mxGeometry as="geometry" x="420" y="40" width="440" height="1580" />
+        </mxCell>
+        <mxCell id="l3_stf" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=44;fillColor=#065F46;strokeColor=#059669;strokeWidth=2;fontFamily=Segoe UI;fontSize=14;fontStyle=1;fontColor=#FFFFFF;swimlaneFillColor=#F0FDF4;" value="PETUGAS LAYANAN KAMPUS" vertex="1">
+          <mxGeometry as="geometry" x="880" y="40" width="360" height="1580" />
+        </mxCell>
+        <mxCell id="t3_start" parent="1" style="ellipse;html=1;shape=startState;fillColor=#0F172A;strokeColor=#334155;strokeWidth=2;" vertex="1">
+          <mxGeometry as="geometry" x="205" y="95" width="30" height="30" />
+        </mxCell>
+        <mxCell id="t3_pilih" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Temukan Barang di Pencarian / Rekomendasi Klik Tombol &quot;Ajukan Klaim&quot;" vertex="1">
+          <mxGeometry as="geometry" x="100" y="145" width="240" height="50" />
+        </mxCell>
+        <mxCell id="t3_isi_form" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Isi Formulir Klaim Kepemilikan: - Deskripsi Kronologi Kehilangan - Bukti Kepemilikan (Nota, Seri, Isi Tas) - Upload Foto Bukti Pendukung" vertex="1">
+          <mxGeometry as="geometry" x="100" y="220" width="240" height="75" />
+        </mxCell>
+        <mxCell id="t3_sys_simpan" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Validasi Data &amp; Simpan Pengajuan Klaim Status: MENUNGGU VERIFIKASI" vertex="1">
+          <mxGeometry as="geometry" x="530" y="230" width="220" height="55" />
+        </mxCell>
+        <mxCell id="t3_notif_stf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Klaim Baru Masuk ke Dashboard Petugas Kampus" vertex="1">
+          <mxGeometry as="geometry" x="530" y="310" width="220" height="50" />
+        </mxCell>
+        <mxCell id="t3_stf_cek" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Buka Rincian Pengajuan Klaim &amp; Cocokkan Bukti dgn Fisik di Ruang Loker" vertex="1">
+          <mxGeometry as="geometry" x="950" y="310" width="220" height="55" />
+        </mxCell>
+        <mxCell id="t3_dec_valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;" value="Bukti Sah &amp; Identik?" vertex="1">
+          <mxGeometry as="geometry" x="1015" y="395" width="90" height="65" />
+        </mxCell>
+        <mxCell id="t3_tolak" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Tolak Klaim Mahasiswa &amp; Beri Catatan Alasan Penolakan" vertex="1">
+          <mxGeometry as="geometry" x="1130" y="400" width="100" height="55" />
+        </mxCell>
+        <mxCell id="t3_sys_tolak" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Update Status Klaim: DITOLAK Kirim Notifikasi Penolakan ke Mahasiswa" vertex="1">
+          <mxGeometry as="geometry" x="680" y="475" width="200" height="55" />
+        </mxCell>
+        <mxCell id="t3_end_tolak" parent="1" style="ellipse;html=1;shape=endState;fillColor=#0F172A;strokeColor=#EF4444;strokeWidth=3;" vertex="1">
+          <mxGeometry as="geometry" x="310" y="487" width="30" height="30" />
+        </mxCell>
+        <mxCell id="t3_setuju" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Klik &quot;Setujui Klaim&quot; &amp; Input Catatan Pengambilan Barang" vertex="1">
+          <mxGeometry as="geometry" x="950" y="500" width="220" height="50" />
+        </mxCell>
+        <mxCell id="t3_sys_gen_qr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="1. Generate Kode Tiket &amp; Token QR Unik 2. Update Klaim: DISETUJUI 3. Update Laporan: SIAP DIAMBIL" vertex="1">
+          <mxGeometry as="geometry" x="520" y="500" width="240" height="65" />
+        </mxCell>
+        <mxCell id="t3_doc_tiket" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.2;fillColor=#FFFBEB;strokeColor=#F59E0B;strokeWidth=1.5;fontColor=#78350F;fontFamily=Segoe UI;fontSize=10;fontStyle=1;shadow=1;" value="Tiket QR Code Pengambilan" vertex="1">
+          <mxGeometry as="geometry" x="780" y="500" width="85" height="65" />
+        </mxCell>
+        <mxCell id="t3_notif_qr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Tiket Siap Diambil ke Akun Mahasiswa" vertex="1">
+          <mxGeometry as="geometry" x="530" y="595" width="220" height="50" />
+        </mxCell>
+        <mxCell id="t3_mhs_datang" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Buka QR Code Tiket di Smartphone Datang ke Ruang Layanan dgn KTM Asli" vertex="1">
+          <mxGeometry as="geometry" x="100" y="675" width="240" height="55" />
+        </mxCell>
+        <mxCell id="t3_stf_scanner" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Buka Menu &quot;Scan QR Serah Terima&quot; Pindai QR Code Tiket Mahasiswa" vertex="1">
+          <mxGeometry as="geometry" x="950" y="675" width="220" height="55" />
+        </mxCell>
+        <mxCell id="t3_sys_verify" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Verifikasi QR via AJAX Realtime: 1. Cek Validitas Token di Database 2. Pastikan Status Klaim DISETUJUI 3. Cek Isolasi Wilayah Unit Kampus 4. Cegah Penyerahan Berulang (Double Claim)" vertex="1">
+          <mxGeometry as="geometry" x="520" y="760" width="240" height="85" />
+        </mxCell>
+        <mxCell id="t3_dec_qr" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;" value="QR Valid &amp; Lolos?" vertex="1">
+          <mxGeometry as="geometry" x="595" y="875" width="90" height="65" />
+        </mxCell>
+        <mxCell id="t3_err_qr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Tampilkan Peringatan Error / Akses Ditolak" vertex="1">
+          <mxGeometry as="geometry" x="440" y="965" width="170" height="45" />
+        </mxCell>
+        <mxCell id="t3_show_data" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Data Verifikasi Realtime ke Layar: (Nama Mahasiswa, NIM, Foto Barang, Bukti)" vertex="1">
+          <mxGeometry as="geometry" x="640" y="960" width="220" height="55" />
+        </mxCell>
+        <mxCell id="t3_stf_cocok" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Cocokkan Identitas Fisik KTM Asli, Ambil Foto Bukti Serah Terima Fisik" vertex="1">
+          <mxGeometry as="geometry" x="950" y="1045" width="220" height="60" />
+        </mxCell>
+        <mxCell id="t3_stf_submit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Klik &quot;Konfirmasi Serah Terima&quot;" vertex="1">
+          <mxGeometry as="geometry" x="950" y="1130" width="220" height="45" />
+        </mxCell>
+        <mxCell id="t3_sys_bast" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="1. Generate No BAST: BAST/{KODE}/{TGL}/{NO} 2. Simpan Riwayat di Pengembalian 3. Update Status: DIKEMBALIKAN" vertex="1">
+          <mxGeometry as="geometry" x="510" y="1205" width="260" height="65" />
+        </mxCell>
+        <mxCell id="t3_doc_bast" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.2;fillColor=#FFFBEB;strokeColor=#F59E0B;strokeWidth=1.5;fontColor=#78350F;fontFamily=Segoe UI;fontSize=10;fontStyle=1;shadow=1;" value="Dokumen BAST Resmi Kampus" vertex="1">
+          <mxGeometry as="geometry" x="790" y="1205" width="85" height="65" />
+        </mxCell>
+        <mxCell id="t3_notif_sukses" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#4C1D95;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Kirim Notifikasi Serah Terima Sukses" vertex="1">
+          <mxGeometry as="geometry" x="530" y="1300" width="220" height="45" />
+        </mxCell>
+        <mxCell id="t3_cetak_bast" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#064E3B;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Cetak / Simpan Dokumen Berita Acara (BAST) sebagai Arsip Resmi Kampus" vertex="1">
+          <mxGeometry as="geometry" x="950" y="1300" width="220" height="50" />
+        </mxCell>
+        <mxCell id="t3_mhs_terima" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontFamily=Segoe UI;fontSize=11;fontStyle=1;shadow=1;spacingTop=4;spacingBottom=4;" value="Terima Barang Milik Kembali &amp; Riwayat Tersimpan Rapi di Sistem" vertex="1">
+          <mxGeometry as="geometry" x="100" y="1380" width="240" height="50" />
+        </mxCell>
+        <mxCell id="t3_end_sukses" parent="1" style="ellipse;html=1;shape=endState;fillColor=#0F172A;strokeColor=#EF4444;strokeWidth=3;" vertex="1">
+          <mxGeometry as="geometry" x="205" y="1465" width="30" height="30" />
+        </mxCell>
+        <mxCell id="e3_1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_start" target="t3_pilih">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_2" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_pilih" target="t3_isi_form">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_3" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Submit Klaim" edge="1" source="t3_isi_form" target="t3_sys_simpan">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_4" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_sys_simpan" target="t3_notif_stf">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_5" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Notifikasi Masuk" edge="1" source="t3_notif_stf" target="t3_stf_cek">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_6" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_stf_cek" target="t3_dec_valid">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_7" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="[Tidak Sah]" edge="1" source="t3_dec_valid" target="t3_tolak">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_8" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Tolak" edge="1" source="t3_tolak" target="t3_sys_tolak">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1180" y="502" />
+              <mxPoint x="880" y="502" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_9" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Notifikasi Penolakan" edge="1" source="t3_sys_tolak" target="t3_end_tolak">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_10" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="[Sah &amp; Sesuai]" edge="1" source="t3_dec_valid" target="t3_setuju">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_11" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Konfirmasi Setuju" edge="1" source="t3_setuju" target="t3_sys_gen_qr">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_12" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_sys_gen_qr" target="t3_doc_tiket">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_13" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_sys_gen_qr" target="t3_notif_qr">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_14" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Tiket QR Terbit" edge="1" source="t3_notif_qr" target="t3_mhs_datang">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="530" y="620" />
+              <mxPoint x="220" y="620" />
+              <mxPoint x="220" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_15" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Tunjukkan QR Code" edge="1" source="t3_mhs_datang" target="t3_stf_scanner">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_16" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Kirim Token QR" edge="1" source="t3_stf_scanner" target="t3_sys_verify">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="950" y="740" />
+              <mxPoint x="760" y="740" />
+              <mxPoint x="760" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_17" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_sys_verify" target="t3_dec_qr">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_18" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="[Tidak Lolos]" edge="1" source="t3_dec_qr" target="t3_err_qr">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_19" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Scan Ulang" edge="1" source="t3_err_qr" target="t3_stf_scanner">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="440" y="987" />
+              <mxPoint x="390" y="987" />
+              <mxPoint x="390" y="702" />
+              <mxPoint x="950" y="702" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_20" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="[Lolos]" edge="1" source="t3_dec_qr" target="t3_show_data">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="640" y="940" />
+              <mxPoint x="750" y="940" />
+              <mxPoint x="750" y="960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_21" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Data Verifikasi" edge="1" source="t3_show_data" target="t3_stf_cocok">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="750" y="1015" />
+              <mxPoint x="1060" y="1015" />
+              <mxPoint x="1060" y="1045" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_22" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Dokumentasi Foto" edge="1" source="t3_stf_cocok" target="t3_stf_submit">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_23" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Konfirmasi Serah Terima" edge="1" source="t3_stf_submit" target="t3_sys_bast">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="950" y="1152" />
+              <mxPoint x="640" y="1152" />
+              <mxPoint x="640" y="1205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_24" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_sys_bast" target="t3_doc_bast">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_25" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" edge="1" source="t3_sys_bast" target="t3_notif_sukses">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3_26" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Terbitkan BAST" edge="1" source="t3_sys_bast" target="t3_cetak_bast">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="770" y="1237" />
+              <mxPoint x="1060" y="1237" />
+              <mxPoint x="1060" y="1300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_27" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Notifikasi Berhasil" edge="1" source="t3_notif_sukses" target="t3_mhs_terima">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="530" y="1322" />
+              <mxPoint x="220" y="1322" />
+              <mxPoint x="220" y="1380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3_28" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;jumpStyle=arc;jumpSize=6;fontFamily=Segoe UI;fontSize=10;fontColor=#0F172A;fontStyle=1;labelBackgroundColor=#FFFFFF;labelBorderColor=#CBD5E1;" value="Barang Kembali" edge="1" source="t3_mhs_terima" target="t3_end_sukses">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
