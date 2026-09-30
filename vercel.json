@@ -22,7 +22,8 @@
             "dest": "/assets/$1"
         },
         {
-            "handle": "filesystem"
+            "src": "/(favicon\\.ico|robots\\.txt|offline\\.html)",
+            "dest": "/$1"
         },
         {
             "src": "/(.*)",
