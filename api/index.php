@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Http\Request;
+
 /**
  * Vercel Serverless Entry Point for FINDIT UBSI (Laravel 10)
  */
@@ -98,5 +101,17 @@ if (empty($dbHost) || $dbHost === '127.0.0.1' || $dbHost === 'localhost') {
     $_SERVER['DB_DATABASE'] = $sqlitePath;
 }
 
-// 5. Forward request to Laravel's public/index.php
-require __DIR__ . '/../public/index.php';
+// 5. Boot Laravel Application directly
+define('LARAVEL_START', microtime(true));
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$app = require_once __DIR__ . '/../bootstrap/app.php';
+
+$kernel = $app->make(Kernel::class);
+
+$response = $kernel->handle(
+    $request = Request::capture()
+)->send();
+
+$kernel->terminate($request, $response);

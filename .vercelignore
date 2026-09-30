@@ -1,5 +1,6 @@
 /vendor
 /node_modules
+/public/index.php
 .env
 .env.backup
 .env.production
