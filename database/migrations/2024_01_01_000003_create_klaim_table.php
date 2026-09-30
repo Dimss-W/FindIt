@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text('bukti_kepemilikan')->nullable();
             $table->string('foto_bukti')->nullable();
             $table->enum('status', ['MENUNGGU VERIFIKASI', 'DISETUJUI', 'DITOLAK'])->default('MENUNGGU VERIFIKASI');
+            $table->string('kode_tiket', 32)->nullable()->unique();
+            $table->string('qr_token', 64)->nullable();
             $table->text('catatan_petugas')->nullable();
             $table->timestamp('tanggal_diverifikasi')->nullable();
             $table->timestamps();

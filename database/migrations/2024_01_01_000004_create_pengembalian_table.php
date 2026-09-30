@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('pengembalian', function (Blueprint $table) {
             $table->id();
+            $table->string('nomor_bast', 64)->nullable()->unique();
             $table->foreignId('laporan_id')->constrained('laporan_barang')->cascadeOnDelete();
             $table->foreignId('klaim_id')->nullable()->constrained('klaim')->nullOnDelete();
             $table->foreignId('petugas_id')->constrained('users')->cascadeOnDelete();

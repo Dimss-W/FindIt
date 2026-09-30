@@ -44,6 +44,22 @@ class UserSeeder extends Seeder
             ]
         );
 
+        // Alias sesuai README.md (admin@findit.ubsi.ac.id / password)
+        User::updateOrCreate(
+            ['email' => 'admin@findit.ubsi.ac.id'],
+            [
+                'name' => 'Administrator FINDIT UBSI',
+                'nim' => 'ADM-GLOBAL-3',
+                'tanggal_lahir' => '1990-01-01',
+                'no_telp' => '081299990003',
+                'role' => 'admin',
+                'kampus_id' => null,
+                'avatar' => null,
+                'is_active' => true,
+                'password' => Hash::make('password'),
+            ]
+        );
+
         // 2. GENERATE AKUN PETUGAS / ADMIN LAYANAN UNTUK SELURUH 27 KAMPUS
         $campuses = Kampus::all();
         foreach ($campuses as $kmp) {
@@ -133,6 +149,39 @@ class UserSeeder extends Seeder
                 'avatar' => null,
                 'is_active' => true,
                 'password' => Hash::make('2004-04-21'), // Password default login: YYYY-MM-DD
+            ]
+        );
+
+        // Mahasiswa 5: Dika Fathur (NIM: 12210181 | Tgl Lahir: 20 September 2004) - sesuai README.md
+        $ckgKampus = Kampus::where('nama_kampus', 'like', '%Cengkareng%')->first() ?? $firstKampus;
+        User::updateOrCreate(
+            ['nim' => '12210181'],
+            [
+                'name' => 'Dika Fathur',
+                'email' => '12210181@bsi.ac.id',
+                'tanggal_lahir' => '2004-09-20',
+                'no_telp' => '081234567890',
+                'role' => 'mahasiswa',
+                'kampus_id' => $ckgKampus?->id,
+                'avatar' => null,
+                'is_active' => true,
+                'password' => Hash::make('2004-09-20'), // Password default login: YYYY-MM-DD
+            ]
+        );
+
+        // Alias Petugas Cengkareng sesuai README.md (petugas.cengkareng@ubsi.ac.id / password)
+        User::updateOrCreate(
+            ['email' => 'petugas.cengkareng@ubsi.ac.id'],
+            [
+                'name' => 'Petugas Layanan UBSI Cengkareng',
+                'nim' => 'ADM-CKG-README',
+                'tanggal_lahir' => '1992-05-15',
+                'no_telp' => '081299887766',
+                'role' => 'petugas',
+                'kampus_id' => $ckgKampus?->id,
+                'avatar' => null,
+                'is_active' => true,
+                'password' => Hash::make('password'),
             ]
         );
     }
