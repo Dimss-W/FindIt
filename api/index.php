@@ -114,14 +114,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
-// Force runtime configuration on Vercel serverless
-if ($useSqliteFallback) {
-    $app['config']->set('database.default', 'sqlite');
-    $app['config']->set('database.connections.sqlite.database', $sqlitePath);
-}
-$app['config']->set('session.driver', 'cookie');
-$app['config']->set('cache.default', 'array');
-
 $kernel = $app->make(Kernel::class);
 
 $response = $kernel->handle(

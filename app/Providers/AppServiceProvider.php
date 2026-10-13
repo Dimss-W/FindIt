@@ -28,16 +28,18 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
-        // Auto-initialize SQLite database on Vercel Serverless cold start
-        if ($isVercel && config('database.default') === 'sqlite') {
-            try {
-                if (!Schema::hasTable('users')) {
-                    Artisan::call('migrate', ['--force' => true]);
-                    Artisan::call('db:seed', ['--force' => true]);
-                }
-            } catch (\Throwable $e) {
-                // Prevent boot crash if migration is concurrently running
+        if ($isVercel) {
+            $dbHost = getenv('DB_HOST') ?: ($_ENV['DB_HOST'] ?? ($_SERVER['DB_HOST'] ?? ''));
+            if (empty($dbHost) || $dbHost === '127.0.0.1' || $dbHost === 'localhost') {
+                config([
+                    'database.default' => 'sqlite',
+                    'database.connections.sqlite.database' => '/tmp/database.sqlite',
+                ]);
             }
+            config([
+                'session.driver' => 'cookie',
+                'cache.default' => 'array',
+            ]);
         }
     }
 }
