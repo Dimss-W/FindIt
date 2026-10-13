@@ -87,11 +87,17 @@ foreach ($defaultEnv as $key => $val) {
 // 4. Zero-Config Database Fallback on Vercel:
 // If no external cloud MySQL DB_HOST is configured (or still set to 127.0.0.1), automatically use SQLite in /tmp
 $dbHost = getenv('DB_HOST') ?: ($_ENV['DB_HOST'] ?? ($_SERVER['DB_HOST'] ?? ''));
-if (empty($dbHost) || $dbHost === '127.0.0.1' || $dbHost === 'localhost') {
-    $sqlitePath = '/tmp/database.sqlite';
-    if (!file_exists($sqlitePath)) {
+$useSqliteFallback = (empty($dbHost) || $dbHost === '127.0.0.1' || $dbHost === 'localhost');
+
+$sqlitePath = '/tmp/database.sqlite';
+if ($useSqliteFallback) {
+    $sourceDb = __DIR__ . '/../database/database.sqlite';
+    if (file_exists($sourceDb) && (!file_exists($sqlitePath) || filesize($sqlitePath) < 50000)) {
+        @copy($sourceDb, $sqlitePath);
+    } elseif (!file_exists($sqlitePath)) {
         @touch($sqlitePath);
     }
+
     putenv('DB_CONNECTION=sqlite');
     $_ENV['DB_CONNECTION'] = 'sqlite';
     $_SERVER['DB_CONNECTION'] = 'sqlite';
@@ -107,6 +113,14 @@ define('LARAVEL_START', microtime(true));
 require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
+
+// Force runtime configuration on Vercel serverless
+if ($useSqliteFallback) {
+    $app['config']->set('database.default', 'sqlite');
+    $app['config']->set('database.connections.sqlite.database', $sqlitePath);
+}
+$app['config']->set('session.driver', 'cookie');
+$app['config']->set('cache.default', 'array');
 
 $kernel = $app->make(Kernel::class);
 
