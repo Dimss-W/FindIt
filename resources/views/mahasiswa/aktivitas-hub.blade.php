@@ -6,7 +6,7 @@
 <div class="space-y-6 max-w-7xl mx-auto" x-data="{ currentTab: '{{ $activeTab ?? 'laporan' }}' }">
     
     <!-- Header -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
         <div>
             <h1 class="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
                 <i class="fa-solid fa-clock-rotate-left text-brand-ubsi"></i>
@@ -59,7 +59,7 @@
     </div>
 
     <!-- TAB 1: LAPORAN SAYA -->
-    <div x-show="currentTab === 'laporan'" x-cloak class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div x-show="currentTab === 'laporan'" x-cloak class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="p-6 border-b border-slate-100 flex items-center justify-between">
             <div>
                 <h3 class="text-base font-bold text-slate-900">Daftar Laporan Kehilangan & Temuan Saya</h3>
@@ -129,7 +129,7 @@
     </div>
 
     <!-- TAB 2: KLAIM SAYA & TIKET QR -->
-    <div x-show="currentTab === 'klaim'" x-cloak class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div x-show="currentTab === 'klaim'" x-cloak class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="p-6 border-b border-slate-100 flex items-center justify-between">
             <div>
                 <h3 class="text-base font-bold text-slate-900">Pengajuan Klaim & Tiket Pengambilan (QR Code)</h3>
@@ -210,7 +210,7 @@
     </div>
 
     <!-- TAB 3: NOTIFIKASI -->
-    <div x-show="currentTab === 'notifikasi'" x-cloak class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden p-6 space-y-4">
+    <div x-show="currentTab === 'notifikasi'" x-cloak class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden p-6 space-y-4">
         <div class="flex items-center justify-between border-b border-slate-100 pb-4">
             <div>
                 <h3 class="text-base font-bold text-slate-900">Pemberitahuan Sistem FINDIT</h3>

@@ -102,7 +102,7 @@
          x-transition:leave-start="opacity-100 translate-y-0 scale-100"
          x-transition:leave-end="opacity-0 translate-y-8 scale-95"
          x-cloak
-         class="fixed bottom-16 sm:bottom-6 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md bg-slate-900/95 text-white p-4 rounded-3xl shadow-2xl border border-blue-500/30 backdrop-blur-xl flex flex-col gap-3">
+         class="fixed bottom-16 sm:bottom-6 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md bg-slate-900/95 text-white p-4 rounded-xl shadow-2xl border border-blue-500/30 backdrop-blur-xl flex flex-col gap-3">
         
         <div class="flex items-start justify-between gap-3">
             <div class="flex items-center gap-3">
@@ -145,7 +145,7 @@
          x-cloak
          @click.away="showIosGuide = false"
          class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm flex items-end sm:items-center justify-center p-4 z-50">
-        <div class="bg-slate-900 text-white p-6 rounded-3xl max-w-sm w-full border border-slate-700 shadow-2xl space-y-4">
+        <div class="bg-slate-900 text-white p-6 rounded-xl max-w-sm w-full border border-slate-700 shadow-2xl space-y-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
                     <i class="fa-brands fa-apple text-xl text-amber-400"></i>
@@ -173,7 +173,7 @@
          x-cloak
          @click.away="showHttpGuide = false"
          class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm flex items-end sm:items-center justify-center p-4 z-50">
-        <div class="bg-slate-900 text-white p-6 rounded-3xl max-w-sm w-full border border-slate-700 shadow-2xl space-y-4">
+        <div class="bg-slate-900 text-white p-6 rounded-xl max-w-sm w-full border border-slate-700 shadow-2xl space-y-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
                     <i class="fa-brands fa-android text-xl text-emerald-400"></i>

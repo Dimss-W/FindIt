@@ -14,7 +14,7 @@
     </div>
 
     <!-- User Information Header Card -->
-    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+    <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div class="flex items-center gap-4">
             <div class="w-16 h-16 rounded-full bg-brand-ubsi text-white flex items-center justify-center font-black text-xl shadow-md overflow-hidden">
                 @if($user->avatar)
@@ -44,7 +44,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         <!-- Form Update Data Profil -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+        <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
             <div class="pb-3 border-b border-slate-100">
                 <h3 class="text-base font-bold text-slate-900">Ubah Data Diri</h3>
                 <p class="text-xs text-slate-400">Pastikan nomor WhatsApp aktif untuk koordinasi serah terima barang</p>
@@ -100,7 +100,7 @@
         </div>
 
         <!-- Form Update Password -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+        <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
             <div class="pb-3 border-b border-slate-100">
                 <h3 class="text-base font-bold text-slate-900">Ganti Kata Sandi</h3>
                 <p class="text-xs text-slate-400">Jaga keamanan akun sistem informasi Anda</p>

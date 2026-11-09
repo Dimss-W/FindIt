@@ -16,7 +16,7 @@
     </div>
 
     <!-- Filters Header -->
-    <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm">
+    <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
         <form action="{{ route('admin.laporan.index') }}" method="GET" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari nama / kode..." 
                    class="px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none">
@@ -55,7 +55,7 @@
     </div>
 
     <!-- Table Card -->
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
                 <thead>

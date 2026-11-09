@@ -35,7 +35,7 @@
     </div>
 
     <!-- Form Card -->
-    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+    <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm">
         <form action="{{ route('mahasiswa.lapor.hilang') }}" method="POST" enctype="multipart/form-data" class="space-y-5">
             @csrf
 

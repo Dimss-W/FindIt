@@ -6,7 +6,7 @@
 <div class="space-y-8 max-w-7xl mx-auto">
     
     <!-- Welcome Banner -->
-    <div class="p-6 sm:p-8 rounded-3xl bg-brand-ubsi text-white shadow-xl shadow-blue-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
+    <div class="p-6 sm:p-8 rounded-xl bg-brand-ubsi text-white shadow-xl shadow-blue-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
         <div class="space-y-2 relative z-10">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-semibold backdrop-blur-sm">
                 <i class="fa-solid fa-graduation-cap"></i> Mahasiswa Aktif UBSI
@@ -37,7 +37,7 @@
     <!-- 4 Dashboard Cards -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         <!-- Card 1: Laporan Hilang -->
-        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
             <div class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl font-bold flex-shrink-0">
                 <i class="fa-solid fa-circle-exclamation"></i>
             </div>
@@ -48,7 +48,7 @@
         </div>
 
         <!-- Card 2: Laporan Ditemukan -->
-        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
             <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl font-bold flex-shrink-0">
                 <i class="fa-solid fa-hand-holding-hand"></i>
             </div>
@@ -59,7 +59,7 @@
         </div>
 
         <!-- Card 3: Dalam Proses -->
-        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
             <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl font-bold flex-shrink-0">
                 <i class="fa-solid fa-clock-rotate-left"></i>
             </div>
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Card 4: Berhasil Dikembalikan -->
-        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
             <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl font-bold flex-shrink-0">
                 <i class="fa-solid fa-champagne-glasses"></i>
             </div>
@@ -85,7 +85,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         <!-- Table: Laporan Terbaru Saya (col-span-2) -->
-        <div class="lg:col-span-2 bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col">
+        <div class="lg:col-span-2 bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col">
             <div class="p-6 border-b border-slate-100 flex items-center justify-between">
                 <div>
                     <h2 class="text-base font-bold text-slate-900">Laporan Terbaru Saya</h2>
@@ -157,7 +157,7 @@
         </div>
 
         <!-- Notifications Preview Column (col-span-1) -->
-        <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm p-6 flex flex-col">
+        <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm p-6 flex flex-col">
             <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-bell text-amber-500"></i>
@@ -190,14 +190,14 @@
                 @endforelse
             </div>
 
-            <!-- Smart Matching Info Card -->
+            <!-- Pencocokan Laporan Otomatis Card -->
             <div class="mt-6 p-4 rounded-2xl bg-blue-50/70 border border-blue-200/60 text-xs text-blue-900">
                 <div class="flex items-center gap-2 font-bold mb-1">
                     <i class="fa-solid fa-code-compare text-blue-600"></i>
                     <span>Pencocokan Otomatis</span>
                 </div>
                 <p class="text-[11px] text-blue-800/80 leading-relaxed">
-                    Sistem FINDIT otomatis mendeteksi kecocokan laporan kehilangan Anda dengan barang yang diamankan security.
+                    Sistem mendeteksi kesesuaian laporan kehilangan Anda dengan barang temuan di pos pengamanan berdasarkan kesamaan unit kampus, kategori, lokasi, dan tanggal kejadian.
                 </p>
             </div>
         </div>

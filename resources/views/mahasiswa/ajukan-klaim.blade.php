@@ -25,31 +25,34 @@
     </div>
 
     <!-- Banner Info Barang yang Diklaim -->
-    <div class="bg-brand-ubsi p-6 rounded-3xl text-white shadow-md flex items-center gap-4">
-        <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-amber-300 text-2xl font-bold flex-shrink-0">
+    <div class="bg-brand-ubsi p-6 rounded-xl text-white shadow-sm flex items-center gap-4">
+        <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-amber-300 text-2xl font-bold flex-shrink-0">
             <i class="fa-solid {{ $laporan->kategori->icon }}"></i>
         </div>
         <div class="min-w-0 flex-1">
             <span class="text-[10px] font-mono font-bold text-blue-200 bg-white/10 px-2 py-0.5 rounded">
                 {{ $laporan->kode_laporan }} • {{ $laporan->kampus->nama_kampus }}
             </span>
-            <h2 class="text-xl font-black tracking-tight mt-1 text-white truncate">{{ $laporan->nama_barang }}</h2>
+            <h2 class="text-xl font-bold tracking-tight mt-1 text-white truncate">{{ $laporan->nama_barang }}</h2>
             <p class="text-xs text-blue-200 line-clamp-1 mt-0.5">Lokasi temuan: {{ $laporan->lokasi_kejadian }}</p>
         </div>
     </div>
 
-    <!-- Alert Ketentuan Klaim -->
-    <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-900 text-xs flex items-start gap-3">
-        <i class="fa-solid fa-shield-halved text-amber-600 text-base mt-0.5 flex-shrink-0"></i>
-        <div class="space-y-1">
-            <span class="font-bold block">Verifikasi Ketat Petugas Keamanan:</span>
-            <p class="leading-relaxed">
-                Untuk mencegah penyalahgunaan, Anda wajib memberikan bukti atau ciri unik barang yang tidak dipublikasikan ke umum (misal: isi dalam dompet, wallpaper handphone, goresan khusus, atau menunjukkan KTM).
-            </p>
+    <!-- Alert Ketentuan Klaim & SOP Pengambilan -->
+    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-xs space-y-3">
+        <div class="flex items-center gap-2 text-slate-900 font-bold border-b border-slate-200 pb-2">
+            <i class="fa-solid fa-id-card-clip text-brand-ubsi text-sm"></i>
+            <span>SOP Verifikasi Kepemilikan & Pengambilan Fisik Barang di Kampus</span>
+        </div>
+        <div class="space-y-1.5 text-[11px] text-slate-600 leading-relaxed">
+            <p><strong>1. Identitas Asli:</strong> Pemilik wajib membawa dan menunjukkan Kartu Tanda Mahasiswa (KTM) / KTP asli saat proses serah terima di Pos Pengamanan Kampus.</p>
+            <p><strong>2. Barang Elektronik (HP/Laptop):</strong> Wajib membuka kunci layar (PIN/Pola/Fingerprint) langsung di depan petugas jaga.</p>
+            <p><strong>3. Helm / Aksesori Kendaraan:</strong> Wajib memperlihatkan STNK kendaraan asli dengan plat nomor yang bersesuaian.</p>
+            <p><strong>4. Jam Layanan Loket:</strong> Senin – Jumat (08.00 – 17.00 WIB) & Sabtu (08.00 – 12.00 WIB) di Pos Pengamanan {{ $laporan->kampus->nama_kampus }}.</p>
         </div>
     </div>
 
-    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+    <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm">
         <form action="{{ route('mahasiswa.klaim.submit', $laporan->id) }}" method="POST" enctype="multipart/form-data" class="space-y-5">
             @csrf
 

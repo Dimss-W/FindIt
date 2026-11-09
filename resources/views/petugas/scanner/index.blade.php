@@ -174,7 +174,7 @@
      x-init="initScanner()">
 
     <!-- Page Header Banner -->
-    <div class="p-6 rounded-3xl bg-brand-ubsi text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-blue-900">
+    <div class="p-6 rounded-xl bg-brand-ubsi text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-blue-900">
         <div>
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30 mb-2">
                 <i class="fa-solid fa-qrcode"></i> Fitur Verifikasi Pengambilan Resmi
@@ -196,7 +196,7 @@
     </div>
 
     <!-- Success Result Banner (After Hand-over) -->
-    <div x-show="completedResult" x-cloak class="p-6 rounded-3xl bg-emerald-50 border-2 border-emerald-300 shadow-xl space-y-4 animate-fadeIn">
+    <div x-show="completedResult" x-cloak class="p-6 rounded-xl bg-emerald-50 border-2 border-emerald-300 shadow-xl space-y-4 animate-fadeIn">
         <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-emerald-500/30">
                 <i class="fa-solid fa-circle-check"></i>
@@ -234,7 +234,7 @@
         
         <!-- Left Column: Scanner Mode (Camera / Manual) -->
         <div class="lg:col-span-6 space-y-4">
-            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm space-y-4">
+            <div class="bg-white rounded-xl p-6 border border-slate-200/80 shadow-sm space-y-4">
                 
                 <!-- Segmented Tabs -->
                 <div class="p-1 bg-slate-100 rounded-2xl flex items-center gap-1 border border-slate-200/80">
@@ -338,8 +338,8 @@
         <div class="lg:col-span-6 space-y-4">
             
             <!-- Default Placeholder State -->
-            <div x-show="!verifyData && !loadingVerify" class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm text-center space-y-3">
-                <div class="w-16 h-16 rounded-3xl bg-slate-100 text-slate-400 flex items-center justify-center text-2xl mx-auto">
+            <div x-show="!verifyData && !loadingVerify" class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm text-center space-y-3">
+                <div class="w-16 h-16 rounded-xl bg-slate-100 text-slate-400 flex items-center justify-center text-2xl mx-auto">
                     <i class="fa-solid fa-id-card-clip"></i>
                 </div>
                 <h3 class="text-base font-bold text-slate-800">Menunggu Pemindaian Tiket</h3>
@@ -349,7 +349,7 @@
             </div>
 
             <!-- Loading Skeleton -->
-            <div x-show="loadingVerify" x-cloak class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm text-center space-y-3 animate-pulse">
+            <div x-show="loadingVerify" x-cloak class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm text-center space-y-3 animate-pulse">
                 <div class="w-12 h-12 rounded-full bg-blue-100 text-brand-ubsi flex items-center justify-center text-xl mx-auto">
                     <i class="fa-solid fa-circle-notch fa-spin"></i>
                 </div>
@@ -358,7 +358,7 @@
             </div>
 
             <!-- Verified Item & Owner Card -->
-            <div x-show="verifyData" x-cloak class="bg-white rounded-3xl p-6 border border-emerald-200 shadow-lg space-y-5">
+            <div x-show="verifyData" x-cloak class="bg-white rounded-xl p-6 border border-emerald-200 shadow-lg space-y-5">
                 
                 <!-- Ticket Badge & Verification Stamp -->
                 <div class="flex items-center justify-between border-b border-slate-100 pb-3">

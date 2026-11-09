@@ -261,7 +261,7 @@
           @mousemove="handleMouseMove($event)"
           @mouseleave="resetTilt()">
         
-        <div class="max-w-[420px] w-full bg-white/95 backdrop-blur-2xl px-5 py-4 sm:px-6 sm:py-5 rounded-3xl border border-white/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] glow-card space-y-3 transition-transform duration-150 ease-out"
+        <div class="max-w-[420px] w-full bg-white/95 backdrop-blur-2xl px-5 py-4 sm:px-6 sm:py-5 rounded-xl border border-white/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] glow-card space-y-3 transition-transform duration-150 ease-out"
              :style="`transform: perspective(1000px) rotateX(${cardTiltX}deg) rotateY(${cardTiltY}deg)`">
             
             <!-- Toast Feedback Notification -->
@@ -282,7 +282,7 @@
 
             <!-- Card Brand Header -->
             <div class="text-center space-y-1">
-                <div class="inline-flex p-1.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-sm hover:scale-105 transition-transform duration-200">
+                <div class="inline-flex p-1.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-sm  transition-transform duration-200">
                     <img src="{{ asset('images/logo-ubsi.png') }}" alt="Logo Resmi UBSI" class="w-10 h-10 object-contain">
                 </div>
                 <h1 class="text-xl font-black text-slate-900 tracking-tight flex items-center justify-center gap-1.5">

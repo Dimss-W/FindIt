@@ -112,8 +112,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <a href="{{ route('landing') }}" class="flex items-center gap-3 group">
-                    <img src="{{ asset('images/logo-ubsi.png') }}" alt="Logo Resmi UBSI" class="w-12 h-12 object-contain rounded-2xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                <a href="{{ route('landing') }}" class="flex items-center gap-3">
+                    <img src="{{ asset('images/logo-ubsi.png') }}" alt="Logo Resmi UBSI" class="w-12 h-12 object-contain rounded-xl shadow-sm">
                     <div>
                         <div class="flex items-center gap-1.5">
                             <span class="text-2xl font-black tracking-tight text-brand-ubsi">FIND<span class="text-amber-500">IT</span></span>
@@ -250,11 +250,17 @@
                 <div>
                     <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Pengamanan & Pengambilan</h4>
                     <p class="text-xs text-slate-400 leading-relaxed mb-3">
-                        Setiap barang yang ditemukan wajib diverifikasi dan diamankan oleh Admin Layanan Kampus setempat sebelum diserahkan melalui proses klaim resmi.
+                        Setiap barang yang ditemukan diverifikasi dan disimpan di pos pengamanan kampus terkait dengan batas retensi 30 hari kalender sesuai ketentuan pengelolaan aset kampus.
                     </p>
-                    <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs">
-                        <span class="text-slate-300 font-medium block mb-1"><i class="fa-solid fa-user-shield text-emerald-400 mr-1.5"></i> Protokol Validasi</span>
-                        <span class="text-slate-400 text-[11px]">Bawa KTM / KTP asli saat proses pengambilan fisik di Kantor Layanan Kampus.</span>
+                    <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs space-y-1.5">
+                        <div>
+                            <span class="text-slate-300 font-medium block"><i class="fa-solid fa-clock text-amber-400 mr-1.5"></i> Jam Layanan Loket:</span>
+                            <span class="text-slate-400 text-[11px] block">Senin – Jumat (08.00 – 17.00 WIB) & Sabtu (08.00 – 12.00 WIB)</span>
+                        </div>
+                        <div class="pt-1 border-t border-slate-700/60">
+                            <span class="text-slate-300 font-medium block"><i class="fa-solid fa-id-card text-emerald-400 mr-1.5"></i> Syarat Pengambilan:</span>
+                            <span class="text-slate-400 text-[11px] block">Bawa KTM/KTP asli & tunjukkan Tiket QR Serah Terima resmi dari FINDIT.</span>
+                        </div>
                     </div>
                 </div>
             </div>

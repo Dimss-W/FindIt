@@ -75,11 +75,11 @@ class LaporanBarang extends Model
     {
         return match ($this->status) {
             'SEDANG DICARI' => ['bg' => 'bg-rose-100 text-rose-700 border-rose-200', 'color' => '#dc2626', 'icon' => 'fa-magnifying-glass'],
-            'ADA KEMUNGKINAN COCOK' => ['bg' => 'bg-amber-100 text-amber-700 border-amber-200', 'color' => '#d97706', 'icon' => 'fa-bolt'],
+            'ADA KEMUNGKINAN COCOK' => ['bg' => 'bg-amber-100 text-amber-700 border-amber-200', 'color' => '#d97706', 'icon' => 'fa-code-compare'],
             'MENUNGGU VERIFIKASI' => ['bg' => 'bg-amber-100 text-amber-700 border-amber-200', 'color' => '#d97706', 'icon' => 'fa-clock'],
             'BARANG DIAMANKAN' => ['bg' => 'bg-emerald-100 text-emerald-700 border-emerald-200', 'color' => '#16a34a', 'icon' => 'fa-shield-halved'],
             'SIAP DIAMBIL' => ['bg' => 'bg-blue-100 text-blue-700 border-blue-200', 'color' => '#2563eb', 'icon' => 'fa-box-archive'],
-            'DIKEMBALIKAN' => ['bg' => 'bg-purple-100 text-purple-700 border-purple-200', 'color' => '#9333ea', 'icon' => 'fa-champagne-glasses'],
+            'DIKEMBALIKAN' => ['bg' => 'bg-purple-100 text-purple-700 border-purple-200', 'color' => '#9333ea', 'icon' => 'fa-handshake'],
             'DIDONASIKAN' => ['bg' => 'bg-amber-100 text-amber-800 border-amber-300', 'color' => '#b45309', 'icon' => 'fa-hand-holding-heart'],
             'DITOLAK' => ['bg' => 'bg-slate-100 text-slate-700 border-slate-200', 'color' => '#64748b', 'icon' => 'fa-ban'],
             default => ['bg' => 'bg-gray-100 text-gray-700 border-gray-200', 'color' => '#4b5563', 'icon' => 'fa-circle-info'],

@@ -6,7 +6,7 @@
 <div class="min-h-[calc(100vh-140px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-xl w-full space-y-6">
         
-        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50">
+        <div class="bg-white p-8 rounded-xl border border-slate-200/80 shadow-xl shadow-slate-200/50">
             <div class="text-center mb-8">
                 <div class="w-14 h-14 rounded-2xl bg-brand-ubsi flex items-center justify-center text-white text-2xl font-black mx-auto mb-3 shadow-md">
                     <i class="fa-solid fa-user-plus text-white"></i>

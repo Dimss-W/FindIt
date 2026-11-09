@@ -25,7 +25,7 @@
     </div>
 
     <!-- Summary Box -->
-    <div class="bg-slate-900 p-6 rounded-3xl text-white shadow-sm flex items-center justify-between border border-slate-800">
+    <div class="bg-slate-900 p-6 rounded-xl text-white shadow-sm flex items-center justify-between border border-slate-800">
         <div class="space-y-1">
             <span class="text-[10px] font-mono font-bold text-slate-300 bg-white/10 px-2 py-0.5 rounded">
                 {{ $laporan->kode_laporan }} • {{ $laporan->kampus->nama_kampus }}
@@ -41,7 +41,7 @@
     </div>
 
     <!-- Form Serah Terima -->
-    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-6">
+    <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm space-y-6">
         <div class="pb-4 border-b border-slate-100">
             <h3 class="text-sm font-bold text-slate-900">Validasi Identitas Penerima</h3>
             <p class="text-xs text-slate-500 mt-0.5">Pastikan mahasiswa telah menunjukkan kartu identitas fisik (KTM atau KTP asli) yang sah sebelum menekan tombol konfirmasi.</p>

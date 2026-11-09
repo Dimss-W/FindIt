@@ -88,7 +88,7 @@
     </div>
 
     <!-- Table Card -->
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
                 <thead>
@@ -189,7 +189,7 @@
          class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
         
         <div @click.away="modalTambah = false" 
-             class="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-100 overflow-hidden transform transition-all">
+             class="bg-white w-full max-w-lg rounded-xl shadow-2xl border border-slate-100 overflow-hidden transform transition-all">
             
             <div class="p-6 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
                 <div class="flex items-center gap-2.5">
@@ -302,7 +302,7 @@
          class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
         
         <div @click.away="modalImport = false" 
-             class="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-100 overflow-hidden transform transition-all">
+             class="bg-white w-full max-w-lg rounded-xl shadow-2xl border border-slate-100 overflow-hidden transform transition-all">
             
             <div class="p-6 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
                 <div class="flex items-center gap-2.5">

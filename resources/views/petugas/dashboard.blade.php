@@ -6,7 +6,7 @@
 <div class="space-y-8 max-w-7xl mx-auto">
     
     <!-- Officer Campus Header Banner -->
-    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white shadow-xl shadow-slate-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 border border-slate-800 relative overflow-hidden">
+    <div class="p-6 sm:p-8 rounded-xl bg-slate-900 text-white shadow-xl shadow-slate-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 border border-slate-800 relative overflow-hidden">
         <div class="space-y-2 relative z-10">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">
                 <i class="fa-solid fa-user-shield"></i> Layanan & Pengamanan Fisik Barang
@@ -34,7 +34,7 @@
     <!-- 5 Dashboard Stats Cards -->
     <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
         <!-- 1. Total Ditemukan -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-boxes-stacked"></i>
             </div>
@@ -43,7 +43,7 @@
         </div>
 
         <!-- 2. Menunggu Verifikasi -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-clock"></i>
             </div>
@@ -52,7 +52,7 @@
         </div>
 
         <!-- 3. Barang Diamankan -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-vault"></i>
             </div>
@@ -61,7 +61,7 @@
         </div>
 
         <!-- 4. Menunggu Pengambilan (Siap Diambil) -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-handshake"></i>
             </div>
@@ -70,7 +70,7 @@
         </div>
 
         <!-- 5. Barang Dikembalikan -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-champagne-glasses"></i>
             </div>
@@ -80,7 +80,7 @@
     </div>
 
     <!-- Table: Barang Terbaru di Kampus Ini -->
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="p-6 border-b border-slate-100 flex items-center justify-between">
             <div>
                 <h2 class="text-base font-bold text-slate-900">Barang Temuan & Hilang Terbaru di Kampus Ini</h2>

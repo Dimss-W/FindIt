@@ -28,7 +28,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         <!-- Left: Item Diamankan -->
-        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Barang yang Diamankan</span>
                 <span class="text-[10px] font-mono font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">{{ $klaim->laporan->kode_laporan }}</span>
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Right: Claim Statement from Student -->
-        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Klaim Mahasiswa</span>
                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold border {{ $klaim->status_badge['bg'] }} uppercase">
@@ -123,7 +123,7 @@
     </div>
 
     <!-- Verification Decision Form -->
-    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-6">
+    <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm space-y-6">
         <div class="pb-4 border-b border-slate-100">
             <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
                 <i class="fa-solid fa-gavel text-amber-500"></i>

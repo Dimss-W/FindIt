@@ -22,7 +22,7 @@
         </form>
     </div>
 
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden divide-y divide-slate-100">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden divide-y divide-slate-100">
         @forelse($notifikasis as $notif)
             <div class="p-5 hover:bg-slate-50 transition-colors flex items-start gap-4 {{ !$notif->is_read ? 'bg-blue-50/40' : '' }}">
                 <div class="w-10 h-10 rounded-2xl {{ !$notif->is_read ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-500' }} flex items-center justify-center flex-shrink-0 text-sm font-bold">

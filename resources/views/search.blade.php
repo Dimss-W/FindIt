@@ -32,7 +32,7 @@
         
         <!-- Sidebar Filter Form -->
         <div class="lg:col-span-1">
-            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm sticky top-28 space-y-6">
+            <div class="bg-white rounded-xl p-6 border border-slate-200/80 shadow-sm sticky top-28 space-y-6">
                 <div class="flex items-center justify-between pb-4 border-b border-slate-100">
                     <span class="text-sm font-bold text-slate-800 flex items-center gap-2">
                         <i class="fa-solid fa-sliders text-blue-600"></i> Filter Pencarian
@@ -175,12 +175,12 @@
                             $badge = $item->status_badge;
                             $isHilang = ($item->jenis_laporan === 'HILANG');
                         @endphp
-                        <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden group">
+                        <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden group">
                             
                             @if($item->thumbnail_foto)
                                 <div class="relative h-44 w-full bg-slate-100 overflow-hidden border-b border-slate-100">
                                     <img src="{{ asset('storage/' . $item->thumbnail_foto) }}" alt="{{ $item->nama_barang }}" 
-                                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300">
+                                         class="w-full h-full object-cover transition-all duration-300">
                                     @if(count($item->foto_list) > 1)
                                         <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-black/60 text-white text-[10px] font-bold backdrop-blur-xs flex items-center gap-1">
                                             <i class="fa-solid fa-images"></i> {{ count($item->foto_list) }} Foto
@@ -260,7 +260,7 @@
                     {{ $laporanList->links() }}
                 </div>
             @else
-                <div class="p-16 bg-white rounded-3xl border border-slate-200/80 text-center space-y-4 shadow-sm">
+                <div class="p-16 bg-white rounded-xl border border-slate-200/80 text-center space-y-4 shadow-sm">
                     <div class="w-16 h-16 rounded-2xl bg-blue-50 text-brand-ubsi flex items-center justify-center mx-auto text-2xl">
                         <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
                     </div>

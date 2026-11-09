@@ -272,7 +272,7 @@
                             <i class="fa-solid fa-boxes-stacked w-5 text-center text-cyan-400"></i>
                             <div class="leading-tight">
                                 <span class="block">Pusat Inventaris Barang</span>
-                                <span class="text-[10px] text-slate-400 font-normal">Loker, Temuan & Smart Match</span>
+                                <span class="text-[10px] text-slate-400 font-normal">Loker, Temuan & Pencocokan</span>
                             </div>
                         </div>
                     </a>

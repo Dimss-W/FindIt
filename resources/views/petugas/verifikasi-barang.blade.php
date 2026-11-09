@@ -25,7 +25,7 @@
     </div>
 
     <!-- Info Barang yang Diserahkan -->
-    <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+    <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
         <div class="flex items-center justify-between pb-4 border-b border-slate-100">
             <div>
                 <span class="text-[10px] font-mono font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
@@ -76,7 +76,7 @@
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                         @foreach($laporan->foto_list as $index => $foto)
                             <a href="{{ asset('storage/' . $foto) }}" target="_blank" class="relative group rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 aspect-square shadow-sm block">
-                                <img src="{{ asset('storage/' . $foto) }}" alt="Foto #{{ $index + 1 }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <img src="{{ asset('storage/' . $foto) }}" alt="Foto #{{ $index + 1 }}" class="w-full h-full object-cover  transition-transform duration-300">
                                 <span class="absolute bottom-1.5 left-1.5 bg-black/60 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs">
                                     Foto #{{ $index + 1 }}
                                 </span>
@@ -90,7 +90,7 @@
     </div>
 
     <!-- Form Pengamanan Fisik -->
-    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+    <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm">
         <div class="mb-5 pb-4 border-b border-slate-100">
             <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
                 <i class="fa-solid fa-clipboard-check text-blue-600"></i>

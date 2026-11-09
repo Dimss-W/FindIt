@@ -18,7 +18,7 @@
         </a>
     </div>
 
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
                 <thead>
@@ -64,8 +64,13 @@
                             </td>
                             <td class="py-4 px-6 text-right">
                                 <div class="flex items-center justify-end gap-1.5">
+                                    <a href="{{ route('petugas.label.cetak', $item->id) }}" target="_blank"
+                                       class="px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-brand-ubsi font-bold text-xs transition-all flex items-center gap-1 border border-blue-200" title="Cetak Label Fisik (Hangtag)">
+                                        <i class="fa-solid fa-print"></i>
+                                        <span>Label</span>
+                                    </a>
                                     <a href="{{ route('mahasiswa.laporan.detail', $item->id) }}" 
-                                       class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-brand-ubsi hover:text-white font-bold text-slate-700 transition-colors text-xs">
+                                       class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-brand-ubsi hover:text-white font-bold text-slate-700 transition-colors text-xs">
                                         Detail
                                     </a>
                                     @if($item->isExpiredForDonation())

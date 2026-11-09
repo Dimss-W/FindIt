@@ -6,7 +6,7 @@
 <div class="space-y-6 max-w-7xl mx-auto">
     
     <!-- Page Header & Campus Context -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
         <div>
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-blue-50 text-brand-ubsi border border-blue-200 mb-2">
                 <i class="fa-solid fa-building-columns"></i>
@@ -70,7 +70,7 @@
 
     <!-- TAB 1: MENUNGGU VERIFIKASI FISIK -->
     @if($activeTab === 'verifikasi')
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="p-6 border-b border-slate-100 flex items-center justify-between">
             <div>
                 <h3 class="text-base font-bold text-slate-900">Barang Temuan Menunggu Verifikasi Fisik</h3>
@@ -137,7 +137,7 @@
 
     <!-- TAB 2: BARANG DIAMANKAN DI LOKER KAMPUS -->
     @if($activeTab === 'diamankan')
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="p-6 border-b border-slate-100 flex items-center justify-between">
             <div>
                 <h3 class="text-base font-bold text-slate-900">Inventaris Fisik Barang Diamankan di Loker Kampus</h3>
@@ -189,13 +189,17 @@
                             </td>
                             <td class="py-3 px-6 text-right">
                                 <div class="flex items-center justify-end gap-1.5">
-                                    <a href="{{ route('mahasiswa.laporan.detail', $item->id) }}" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all">
+                                    <a href="{{ route('petugas.label.cetak', $item->id) }}" target="_blank" class="px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-brand-ubsi font-bold text-xs transition-all flex items-center gap-1 border border-blue-200" title="Cetak Label Inventaris Fisik (Hangtag)">
+                                        <i class="fa-solid fa-print"></i>
+                                        <span>Label</span>
+                                    </a>
+                                    <a href="{{ route('mahasiswa.laporan.detail', $item->id) }}" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all">
                                         Detail
                                     </a>
                                     @if($item->isExpiredForDonation())
                                         <form action="{{ route('petugas.barang.donasikan', $item->id) }}" method="POST" onsubmit="return confirm('Konfirmasi alokasikan barang {{ $item->nama_barang }} untuk kegiatan sosial/donasi kampus (Masa simpan > 90 hari)?')">
                                             @csrf
-                                            <button type="submit" class="px-2.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm flex items-center gap-1">
+                                            <button type="submit" class="px-2.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm flex items-center gap-1">
                                                 <i class="fa-solid fa-hand-holding-heart"></i> Donasi
                                             </button>
                                         </form>
@@ -222,7 +226,7 @@
 
     <!-- TAB 3: LAPORAN KEHILANGAN DI KAMPUS INI -->
     @if($activeTab === 'hilang')
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="p-6 border-b border-slate-100 flex items-center justify-between">
             <div>
                 <h3 class="text-base font-bold text-slate-900">Laporan Kehilangan Mahasiswa di {{ $kampus->nama_kampus }}</h3>
@@ -286,12 +290,12 @@
     </div>
     @endif
 
-    <!-- TAB 4: SMART MATCHING PAIRS -->
+    <!-- TAB 4: PENCOCOKAN LAPORAN OTOMATIS -->
     @if($activeTab === 'matching')
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden p-6 space-y-6">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden p-6 space-y-6">
         <div>
-            <h3 class="text-base font-bold text-slate-900">Pencocokan Cerdas (Smart Auto-Matching)</h3>
-            <p class="text-xs text-slate-500 mt-0.5">Sistem secara otomatis mendeteksi kecocokan antara laporan kehilangan dan barang temuan di {{ $kampus->nama_kampus }}.</p>
+            <h3 class="text-base font-bold text-slate-900">Pencocokan Laporan Otomatis (Metode Pembobotan Parameter)</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Sistem membandingkan kesesuaian unit kampus, kategori, judul, lokasi, dan tanggal antara laporan kehilangan dan barang temuan.</p>
         </div>
 
         @forelse($matchedPairs as $pair)

@@ -140,6 +140,7 @@ Route::middleware(['auth', 'role:admin,petugas'])->prefix('layanan-kampus')->nam
     Route::post('/scan-qr/verify', [PetugasController::class, 'verifyQrTicket'])->name('scan.qr.verify');
     Route::post('/scan-qr/proses', [PetugasController::class, 'prosesSerahTerimaQr'])->name('scan.qr.proses');
     Route::get('/bast/{id}/cetak', [PetugasController::class, 'cetakBast'])->name('bast.cetak');
+    Route::get('/label/{id}/cetak', [PetugasController::class, 'cetakLabel'])->name('label.cetak');
 
     Route::get('/barang-siap-diambil', [PetugasController::class, 'barangSiapDiambil'])->name('barang.siap_diambil');
     Route::get('/pengembalian/{id}', [PetugasController::class, 'formPengembalian'])->name('pengembalian.form');

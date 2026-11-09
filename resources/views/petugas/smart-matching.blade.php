@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Smart Matching Barang Hilang & Ditemukan')
+@section('title', 'Pencocokan Laporan Barang Hilang & Ditemukan')
 
 @section('content')
 <div class="space-y-6 max-w-7xl mx-auto">
@@ -56,7 +56,7 @@
                 $matches = $pair['matches'];
             @endphp
 
-            <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm p-6 sm:p-8 space-y-6">
+            <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm p-6 sm:p-8 space-y-6">
                 <!-- Lost Item Banner -->
                 <div class="p-4 rounded-2xl bg-rose-50/70 border border-rose-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div class="flex items-start gap-3">
@@ -155,7 +155,7 @@
                 </div>
             </div>
         @empty
-            <div class="bg-white p-16 rounded-3xl border border-slate-200/80 text-center space-y-3 shadow-sm">
+            <div class="bg-white p-16 rounded-xl border border-slate-200/80 text-center space-y-3 shadow-sm">
                 <div class="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-3xl mx-auto">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>

@@ -26,7 +26,7 @@
         $isDitemukan = ($laporan->jenis_laporan === 'DITEMUKAN');
     @endphp
     
-    <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div class="space-y-1">
             <div class="flex items-center gap-2">
                 <span class="px-3 py-1 text-xs font-bold rounded-full border {{ $badge['bg'] }} uppercase flex items-center gap-1.5">
@@ -43,6 +43,14 @@
         </div>
 
         <div class="flex items-center gap-2 flex-wrap">
+            @if(Auth::check() && (Auth::user()->isPetugas() || Auth::user()->isAdmin()) && $laporan->penyimpanan)
+                <a href="{{ route('petugas.label.cetak', $laporan->id) }}" target="_blank"
+                   class="px-4 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-brand-ubsi border border-blue-200 text-xs font-bold transition-all flex items-center gap-1.5" title="Cetak Label Fisik (Hangtag)">
+                    <i class="fa-solid fa-print"></i>
+                    <span>Cetak Label Fisik</span>
+                </a>
+            @endif
+
             @if($isDitemukan && !$isOwner)
                 @if($myClaim)
                     <div class="px-4 py-2 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold flex items-center gap-2">
@@ -89,23 +97,24 @@
         ];
     @endphp
 
-    <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+    <!-- Timeline Pelacakan & Log Audit Administrasi -->
+    <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-5">
         <div class="flex items-center justify-between">
             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-2">
-                <i class="fa-solid fa-route text-brand-ubsi"></i> Timeline & Status Pelacakan Barang
+                <i class="fa-solid fa-route text-brand-ubsi"></i> Timeline & Prosedur Pelacakan Barang
             </span>
             <span class="text-xs font-bold text-brand-ubsi bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200">
                 Tahap {{ $currentStep }} dari 5
             </span>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-2">
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-1">
             @foreach($steps as $stepNum => $step)
                 @php
                     $isPassed = ($currentStep >= $stepNum);
                     $isCurrent = ($currentStep === $stepNum);
                 @endphp
-                <div class="p-3 rounded-2xl border transition-all text-center space-y-1.5 {{ $isCurrent ? 'bg-blue-50 border-brand-ubsi shadow-sm' : ($isPassed ? 'bg-slate-50 border-slate-200' : 'bg-white border-slate-100 opacity-60') }}">
+                <div class="p-3 rounded-xl border transition-all text-center space-y-1.5 {{ $isCurrent ? 'bg-blue-50 border-brand-ubsi shadow-sm' : ($isPassed ? 'bg-slate-50 border-slate-200' : 'bg-white border-slate-100 opacity-60') }}">
                     <div class="w-8 h-8 rounded-full mx-auto flex items-center justify-center text-xs font-bold {{ $isCurrent ? 'bg-brand-ubsi text-white shadow-md' : ($isPassed ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-500') }}">
                         @if($isPassed && !$isCurrent)
                             <i class="fa-solid fa-check text-xs"></i>
@@ -122,11 +131,72 @@
                 </div>
             @endforeach
         </div>
+
+        <!-- Log Aktivitas Administrasi Resmi (Audit Trail) -->
+        <div class="pt-3 border-t border-slate-100">
+            <span class="text-[11px] font-bold text-slate-700 uppercase tracking-wider block mb-2">
+                <i class="fa-solid fa-clock-rotate-left mr-1 text-slate-400"></i> Buku Riwayat Penanganan (Audit Log)
+            </span>
+            <div class="space-y-2 text-xs">
+                <div class="flex items-start gap-2.5 text-slate-600">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"></span>
+                    <div>
+                        <span class="font-semibold text-slate-800">{{ $laporan->created_at->translatedFormat('d M Y, H:i') }} WIB</span>
+                        &bull; Laporan {{ $laporan->jenis_laporan === 'HILANG' ? 'kehilangan' : 'penemuan' }} terdaftar oleh 
+                        <strong>{{ $laporan->user->name }}</strong> ({{ $laporan->user->isMahasiswa() ? 'NIM: ' . ($laporan->user->nim ?? '-') : 'Staf Kampus' }}).
+                    </div>
+                </div>
+
+                @if($laporan->penyimpanan)
+                <div class="flex items-start gap-2.5 text-slate-600">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 flex-shrink-0"></span>
+                    <div>
+                        <span class="font-semibold text-slate-800">
+                            {{ $laporan->penyimpanan->tanggal_diterima ? $laporan->penyimpanan->tanggal_diterima->translatedFormat('d M Y, H:i') : $laporan->created_at->translatedFormat('d M Y, H:i') }} WIB
+                        </span>
+                        &bull; Fisik barang diverifikasi dan disimpan di <strong>{{ $laporan->penyimpanan->lokasi_penyimpanan ?? 'Pos Satpam' }}</strong> 
+                        oleh Petugas Keamanan <strong>{{ $laporan->penyimpanan->petugas?->name ?? 'Staf Jaga' }}</strong> (Kondisi: {{ $laporan->penyimpanan->kondisi_barang ?? 'Baik' }}).
+                    </div>
+                </div>
+                @endif
+
+                @if($myClaim)
+                <div class="flex items-start gap-2.5 text-slate-600">
+                    <span class="w-2 h-2 rounded-full bg-amber-500 mt-1.5 flex-shrink-0"></span>
+                    <div>
+                        <span class="font-semibold text-slate-800">{{ $myClaim->created_at->translatedFormat('d M Y, H:i') }} WIB</span>
+                        &bull; Pengajuan klaim kepemilikan diajukan oleh <strong>{{ $myClaim->user->name }}</strong>.
+                        @if($myClaim->status === 'DISETUJUI')
+                            <span class="text-emerald-700 font-bold block mt-0.5">
+                                [Disetujui] Verifikasi identitas berhasil oleh {{ $myClaim->petugas?->name ?? 'Petugas' }} pada {{ $myClaim->tanggal_diverifikasi ? $myClaim->tanggal_diverifikasi->translatedFormat('d M Y, H:i') : '-' }} WIB. Tiket QR: {{ $myClaim->kode_tiket }}.
+                            </span>
+                        @elseif($myClaim->status === 'DITOLAK')
+                            <span class="text-rose-600 font-bold block mt-0.5">
+                                [Ditolak] Verifikasi klaim belum sesuai. Catatan petugas: {{ $myClaim->catatan_petugas ?? '-' }}.
+                            </span>
+                        @else
+                            <span class="text-amber-700 block mt-0.5">[Menunggu Verifikasi Dokumen & KTM]</span>
+                        @endif
+                    </div>
+                </div>
+                @endif
+
+                @if($laporan->pengembalian)
+                <div class="flex items-start gap-2.5 text-slate-600">
+                    <span class="w-2 h-2 rounded-full bg-purple-600 mt-1.5 flex-shrink-0"></span>
+                    <div>
+                        <span class="font-semibold text-slate-800">{{ $laporan->pengembalian->tanggal_pengembalian->translatedFormat('d M Y, H:i') }} WIB</span>
+                        &bull; Serah terima fisik barang selesai. Diterbitkan dokumen resmi <strong>{{ $laporan->pengembalian->nomor_bast }}</strong> oleh Petugas <strong>{{ $laporan->pengembalian->petugas->name }}</strong>.
+                    </div>
+                </div>
+                @endif
+            </div>
+        </div>
     </div>
 
     <!-- Digital QR Code Ticket Card (If Claim Approved) -->
     @if($myClaim && $myClaim->status === 'DISETUJUI')
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white shadow-xl border border-slate-800 relative overflow-hidden space-y-5 animate-fadeIn">
+        <div class="p-6 sm:p-8 rounded-xl bg-slate-900 text-white shadow-xl border border-slate-800 relative overflow-hidden space-y-5 animate-fadeIn">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/15 pb-4">
                 <div class="flex items-center gap-3">
                     <img src="{{ asset('images/logo-ubsi.png') }}" alt="Logo UBSI" class="w-10 h-10 object-contain rounded-xl bg-white p-1">
@@ -206,7 +276,7 @@
 
     <!-- Smart Auto-Matching Recommendations Banner (If HILANG and has matches) -->
     @if($laporan->jenis_laporan === 'HILANG' && isset($matches) && count($matches) > 0)
-        <div class="p-6 rounded-3xl bg-blue-50/80 border border-blue-200 shadow-sm space-y-4">
+        <div class="p-6 rounded-xl bg-blue-50/80 border border-blue-200 shadow-sm space-y-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2.5">
                     <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center text-base shadow-md shadow-blue-600/30">
@@ -271,7 +341,7 @@
         <div class="lg:col-span-2 space-y-6">
             
             <!-- Information Card -->
-            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-6">
+            <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm space-y-6">
                 <div>
                     <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Deskripsi Kejadian</h2>
                     <p class="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-2xl border border-slate-100">
@@ -346,7 +416,7 @@
                             @foreach($laporan->foto_list as $index => $foto)
                                 <div class="relative group rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 aspect-square shadow-sm cursor-pointer" onclick="openPhotoModal('{{ asset('storage/' . $foto) }}', 'Foto #{{ $index + 1 }} - {{ addslashes($laporan->nama_barang) }}')">
                                     <img src="{{ asset('storage/' . $foto) }}" alt="{{ $laporan->nama_barang }} - Foto {{ $index + 1 }}" 
-                                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300">
+                                         class="w-full h-full object-cover transition-all duration-300">
                                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5 backdrop-blur-xs">
                                         <i class="fa-solid fa-magnifying-glass-plus"></i> Perbesar
                                     </div>
@@ -360,9 +430,9 @@
                 @endif
             </div>
 
-            <!-- Smart Matching Candidates Box -->
+            <!-- Rekomendasi Berkas Barang Terkait -->
             @if(count($matches) > 0)
-                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <div class="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-xs">
@@ -427,7 +497,7 @@
         <div class="space-y-6">
             
             <!-- Pelapor Info Card -->
-            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-3">
+            <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
                 <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Informasi Pelapor</span>
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-full bg-blue-100 text-brand-ubsi flex items-center justify-center font-bold text-xs">
@@ -445,7 +515,7 @@
 
             <!-- Custody / Penyimpanan Fisik Card -->
             @if($laporan->penyimpanan)
-                <div class="bg-emerald-50/60 p-6 rounded-3xl border border-emerald-200/80 shadow-sm space-y-3">
+                <div class="bg-emerald-50/60 p-6 rounded-xl border border-emerald-200/80 shadow-sm space-y-3">
                     <div class="flex items-center gap-2 text-emerald-800 font-bold text-xs uppercase tracking-wider">
                         <i class="fa-solid fa-vault text-emerald-600"></i>
                         <span>Pengamanan Fisik Barang</span>
@@ -479,7 +549,7 @@
 
             <!-- Pengembalian Handover Card -->
             @if($laporan->pengembalian)
-                <div class="bg-purple-50/60 p-6 rounded-3xl border border-purple-200/80 shadow-sm space-y-3">
+                <div class="bg-purple-50/60 p-6 rounded-xl border border-purple-200/80 shadow-sm space-y-3">
                     <div class="flex items-center gap-2 text-purple-800 font-bold text-xs uppercase tracking-wider">
                         <i class="fa-solid fa-champagne-glasses text-purple-600"></i>
                         <span>Telah Selesai Dikembalikan</span>

@@ -573,6 +573,21 @@ class PetugasController extends Controller
     }
 
     /**
+     * Cetak Label Inventaris Fisik (Hangtag / Stiker Loker Pengamanan)
+     */
+    public function cetakLabel($id)
+    {
+        $laporan = LaporanBarang::with([
+            'kampus',
+            'kategori',
+            'penyimpanan.petugas',
+            'user'
+        ])->findOrFail($id);
+
+        return view('petugas.label.cetak', compact('laporan'));
+    }
+
+    /**
      * PUSAT INVENTARIS BARANG KAMPUS (Unified Hub / All-in-One)
      * Menggabungkan Verifikasi, Diamankan, Laporan Hilang, dan Smart Matching dalam 1 halaman efisien.
      */

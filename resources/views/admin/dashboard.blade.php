@@ -6,7 +6,7 @@
 <div class="space-y-8 max-w-7xl mx-auto">
     
     <!-- Admin Header Banner -->
-    <div class="p-6 sm:p-8 rounded-3xl bg-brand-ubsi text-white shadow-xl shadow-blue-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
+    <div class="p-6 sm:p-8 rounded-xl bg-brand-ubsi text-white shadow-xl shadow-blue-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
         <div class="space-y-2 relative z-10">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-bold">
                 <i class="fa-solid fa-crown"></i> Master Control Panel
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Quick Operational Action Hub (Admin Handling Custody & Returns) -->
-    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+    <div class="bg-white p-6 sm:p-7 rounded-xl border border-slate-200 shadow-sm space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div class="flex items-center gap-2.5">
                 <div class="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xs shadow-sm">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="mt-3">
                     <h3 class="text-xs font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">Barang Diamankan (Loker)</h3>
-                    <p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">Kelola penyimpanan fisik & pantau smart matching otomatis.</p>
+                    <p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">Kelola penyimpanan fisik & pantau pencocokan laporan otomatis.</p>
                 </div>
                 <div class="mt-3 pt-2 border-t border-slate-100 text-[11px] font-bold text-emerald-600 flex items-center gap-1">
                     <span>Lihat Brankas</span> &rarr;
@@ -122,7 +122,7 @@
     <!-- 5 Admin Stats Cards -->
     <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
         <!-- 1. Total Laporan -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-ubsi flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-chart-simple"></i>
             </div>
@@ -131,7 +131,7 @@
         </div>
 
         <!-- 2. Barang Hilang -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-circle-exclamation"></i>
             </div>
@@ -140,7 +140,7 @@
         </div>
 
         <!-- 3. Barang Ditemukan -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-hand-holding-hand"></i>
             </div>
@@ -149,7 +149,7 @@
         </div>
 
         <!-- 4. Barang Diamankan -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-vault"></i>
             </div>
@@ -158,7 +158,7 @@
         </div>
 
         <!-- 5. Barang Dikembalikan -->
-        <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
             <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg mb-2">
                 <i class="fa-solid fa-champagne-glasses"></i>
             </div>
@@ -171,7 +171,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         <!-- Bar Chart: Laporan per Kampus (col-span-2) -->
-        <div class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+        <div class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
             <div class="flex items-center justify-between mb-4">
                 <div>
                     <h3 class="text-base font-bold text-slate-900">Laporan Berdasarkan Kampus UBSI</h3>
@@ -186,7 +186,7 @@
         </div>
 
         <!-- Doughnut Chart: Laporan per Kategori (col-span-1) -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+        <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
             <div class="flex items-center justify-between mb-4">
                 <div>
                     <h3 class="text-base font-bold text-slate-900">Laporan per Kategori</h3>
@@ -203,7 +203,7 @@
     </div>
 
     <!-- Statistik Status Barang Cards -->
-    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+    <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
         <h3 class="text-base font-bold text-slate-900">Statistik Status Barang Saat Ini</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             @foreach($statusCounts as $stName => $stCount)
@@ -227,7 +227,7 @@
     </div>
 
     <!-- Table: Laporan Global Terkini -->
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="p-6 border-b border-slate-100 flex items-center justify-between">
             <div>
                 <h3 class="text-base font-bold text-slate-900">Laporan Masuk Terbaru (Semua Kampus)</h3>

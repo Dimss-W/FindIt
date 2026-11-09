@@ -8,7 +8,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto space-y-5">
             <div class="flex items-center justify-center">
-                <img src="{{ asset('images/logo-ubsi.png') }}" alt="Logo Resmi UBSI" class="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-md hover:scale-105 transition-transform duration-300">
+                <img src="{{ asset('images/logo-ubsi.png') }}" alt="Logo Resmi UBSI" class="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-md ">
             </div>
 
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/80 border border-blue-200/80 text-brand-ubsi text-xs font-semibold shadow-sm">
@@ -27,7 +27,7 @@
 
             <!-- Main Quick Search Box -->
             <div class="pt-4 max-w-2xl mx-auto">
-                <form action="{{ route('search') }}" method="GET" class="p-2 sm:p-2.5 bg-white rounded-3xl shadow-xl shadow-blue-900/5 border border-slate-200/80 flex flex-col sm:flex-row items-center gap-2">
+                <form action="{{ route('search') }}" method="GET" class="p-2 sm:p-2.5 bg-white rounded-xl shadow-xl shadow-blue-900/5 border border-slate-200/80 flex flex-col sm:flex-row items-center gap-2">
                     <div class="flex-1 flex items-center gap-3 px-4 w-full">
                         <i class="fa-solid fa-magnifying-glass text-slate-400 text-lg"></i>
                         <input type="text" name="q" placeholder="Cari nama barang (contoh: Dompet, KTM, Laptop)..." 
@@ -79,7 +79,7 @@
 </section>
 
 <!-- Statistik FindIt Section -->
-<section class="py-12 bg-white border-b border-slate-200/80 -mt-8 relative z-20 max-w-6xl mx-auto rounded-3xl shadow-xl shadow-slate-200/50 px-6 sm:px-10">
+<section class="py-12 bg-white border-b border-slate-200/80 -mt-8 relative z-20 max-w-6xl mx-auto rounded-xl shadow-xl shadow-slate-200/50 px-6 sm:px-10">
     <div class="text-center mb-8">
         <span class="text-xs font-bold text-brand-ubsi tracking-wider uppercase">Statistik Transparansi</span>
         <h2 class="text-2xl font-black text-slate-900 mt-1">Aktivitas FindIt Terkini</h2>
@@ -116,7 +116,7 @@
         <!-- Card 4: Barang Dikembalikan -->
         <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:shadow-md transition-shadow">
             <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mx-auto mb-3 text-lg font-bold">
-                <i class="fa-solid fa-champagne-glasses"></i>
+                <i class="fa-solid fa-handshake"></i>
             </div>
             <div class="text-3xl font-black text-slate-900 tracking-tight">{{ number_format($stats['barang_dikembalikan']) }}</div>
             <div class="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wider">Telah Dikembalikan</div>
@@ -135,7 +135,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
             <!-- Step 1 -->
-            <div class="p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
+            <div class="p-6 rounded-xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
                 <div class="w-12 h-12 rounded-2xl bg-blue-100 text-brand-ubsi flex items-center justify-center font-black text-lg mb-4">
                     1
                 </div>
@@ -149,7 +149,7 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
+            <div class="p-6 rounded-xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
                 <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-black text-lg mb-4">
                     2
                 </div>
@@ -163,7 +163,7 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
+            <div class="p-6 rounded-xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
                 <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-black text-lg mb-4">
                     3
                 </div>
@@ -177,7 +177,7 @@
             </div>
 
             <!-- Step 4 -->
-            <div class="p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
+            <div class="p-6 rounded-xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
                 <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg mb-4">
                     4
                 </div>
@@ -191,16 +191,16 @@
             </div>
 
             <!-- Step 5 -->
-            <div class="p-6 rounded-3xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
+            <div class="p-6 rounded-xl bg-white border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-transform">
                 <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-black text-lg mb-4">
                     5
                 </div>
                 <h3 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
                     <span>Kembalikan</span>
-                    <i class="fa-solid fa-champagne-glasses text-purple-500 text-xs"></i>
+                    <i class="fa-solid fa-handshake text-purple-500 text-xs"></i>
                 </h3>
                 <p class="text-xs text-slate-500 leading-relaxed">
-                    Mahasiswa mengambil fisik barang di Pos Security dengan validasi KTM/KTP dan penandatanganan log serah terima.
+                    Mahasiswa mengambil fisik barang di Pos Security dengan validasi KTM/KTP dan penerbitan Berita Acara Serah Terima (BAST) resmi.
                 </p>
             </div>
         </div>

@@ -31,7 +31,7 @@
     </div>
 
     <!-- Table Card -->
-    <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+    <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
                 <thead>
@@ -94,7 +94,7 @@
 
     <!-- Modal Tambah Kampus -->
     <div x-show="modalTambah" x-cloak class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-        <div @click.away="modalTambah = false" class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl">
+        <div @click.away="modalTambah = false" class="bg-white rounded-xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <h3 class="text-base font-bold text-slate-900">Tambah Unit Kampus UBSI Baru</h3>
                 <button @click="modalTambah = false" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark"></i></button>
@@ -142,7 +142,7 @@
 
     <!-- Modal Edit Kampus -->
     <div x-show="editModal" x-cloak class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-        <div @click.away="editModal = false" class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl">
+        <div @click.away="editModal = false" class="bg-white rounded-xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <h3 class="text-base font-bold text-slate-900">Edit Data Kampus</h3>
                 <button @click="editModal = false" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark"></i></button>
