@@ -6,7 +6,7 @@
 <div class="space-y-8 max-w-7xl mx-auto">
     
     <!-- Officer Campus Header Banner -->
-    <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white shadow-xl shadow-slate-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 border border-slate-800 relative overflow-hidden">
+    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white shadow-xl shadow-slate-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 border border-slate-800 relative overflow-hidden">
         <div class="space-y-2 relative z-10">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">
                 <i class="fa-solid fa-user-shield"></i> Layanan & Pengamanan Fisik Barang

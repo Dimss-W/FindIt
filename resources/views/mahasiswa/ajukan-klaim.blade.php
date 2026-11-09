@@ -25,7 +25,7 @@
     </div>
 
     <!-- Banner Info Barang yang Diklaim -->
-    <div class="bg-gradient-to-r from-blue-900 to-brand-ubsi p-6 rounded-3xl text-white shadow-md flex items-center gap-4">
+    <div class="bg-brand-ubsi p-6 rounded-3xl text-white shadow-md flex items-center gap-4">
         <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-amber-300 text-2xl font-bold flex-shrink-0">
             <i class="fa-solid {{ $laporan->kategori->icon }}"></i>
         </div>

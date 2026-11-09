@@ -126,7 +126,7 @@
 
     <!-- Digital QR Code Ticket Card (If Claim Approved) -->
     @if($myClaim && $myClaim->status === 'DISETUJUI')
-        <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-950 via-brand-ubsi to-slate-950 text-white shadow-2xl border border-blue-800 relative overflow-hidden space-y-5 animate-fadeIn">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white shadow-xl border border-slate-800 relative overflow-hidden space-y-5 animate-fadeIn">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/15 pb-4">
                 <div class="flex items-center gap-3">
                     <img src="{{ asset('images/logo-ubsi.png') }}" alt="Logo UBSI" class="w-10 h-10 object-contain rounded-xl bg-white p-1">
@@ -206,7 +206,7 @@
 
     <!-- Smart Auto-Matching Recommendations Banner (If HILANG and has matches) -->
     @if($laporan->jenis_laporan === 'HILANG' && isset($matches) && count($matches) > 0)
-        <div class="p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-white to-amber-50 border border-amber-200 shadow-sm space-y-4">
+        <div class="p-6 rounded-3xl bg-blue-50/80 border border-blue-200 shadow-sm space-y-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2.5">
                     <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center text-base shadow-md shadow-blue-600/30">
@@ -362,7 +362,7 @@
 
             <!-- Smart Matching Candidates Box -->
             @if(count($matches) > 0)
-                <div class="bg-gradient-to-br from-indigo-50/80 via-white to-blue-50/80 p-6 rounded-3xl border border-indigo-100 shadow-sm space-y-4">
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <div class="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-xs">

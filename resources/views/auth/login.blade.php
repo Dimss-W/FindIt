@@ -298,7 +298,7 @@
             <div class="p-1 bg-slate-100 rounded-2xl flex items-center gap-1 border border-slate-200/80 relative">
                 <button type="button" 
                         @click="switchTab('mahasiswa')" 
-                        :class="activeTab === 'mahasiswa' ? 'bg-gradient-to-r from-brand-ubsi to-blue-700 text-white font-bold shadow-md' : 'text-slate-600 hover:text-slate-900 font-medium'"
+                        :class="activeTab === 'mahasiswa' ? 'bg-brand-ubsi text-white font-bold shadow-sm' : 'text-slate-600 hover:text-slate-900 font-medium'"
                         class="flex-1 py-1.5 px-3 rounded-xl text-xs transition-all duration-200 flex items-center justify-center gap-1.5 relative z-10">
                     <i class="fa-solid fa-user-graduate text-xs"></i>
                     <span>Mahasiswa</span>
@@ -306,7 +306,7 @@
 
                 <button type="button" 
                         @click="switchTab('admin')" 
-                        :class="activeTab === 'admin' ? 'bg-gradient-to-r from-brand-ubsi to-blue-700 text-white font-bold shadow-md' : 'text-slate-600 hover:text-slate-900 font-medium'"
+                        :class="activeTab === 'admin' ? 'bg-brand-ubsi text-white font-bold shadow-sm' : 'text-slate-600 hover:text-slate-900 font-medium'"
                         class="flex-1 py-1.5 px-3 rounded-xl text-xs transition-all duration-200 flex items-center justify-center gap-1.5 relative z-10">
                     <i class="fa-solid fa-shield-halved text-xs"></i>
                     <span>Admin / Staf</span>
@@ -492,7 +492,7 @@
                 <!-- Submit Button with Dynamic Loading State -->
                 <button type="submit" 
                         :disabled="isSubmitting"
-                        class="w-full py-2.5 rounded-xl bg-gradient-to-r from-brand-ubsi via-blue-700 to-indigo-800 hover:from-blue-900 hover:to-brand-ubsi text-white text-xs font-bold shadow-md shadow-blue-900/25 active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-1 disabled:opacity-75 cursor-pointer">
+                        class="w-full py-2.5 rounded-xl bg-brand-ubsi hover:bg-blue-900 text-white text-xs font-bold shadow-md shadow-blue-950/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-1 disabled:opacity-75 cursor-pointer">
                     <template x-if="!isSubmitting">
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-right-to-bracket text-amber-300"></i>

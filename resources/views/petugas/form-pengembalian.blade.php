@@ -25,17 +25,17 @@
     </div>
 
     <!-- Summary Box -->
-    <div class="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 p-6 rounded-3xl text-white shadow-md flex items-center justify-between">
+    <div class="bg-slate-900 p-6 rounded-3xl text-white shadow-sm flex items-center justify-between border border-slate-800">
         <div class="space-y-1">
-            <span class="text-[10px] font-mono font-bold text-purple-300 bg-white/10 px-2 py-0.5 rounded">
+            <span class="text-[10px] font-mono font-bold text-slate-300 bg-white/10 px-2 py-0.5 rounded">
                 {{ $laporan->kode_laporan }} • {{ $laporan->kampus->nama_kampus }}
             </span>
-            <h2 class="text-xl font-black text-white mt-1">{{ $laporan->nama_barang }}</h2>
-            <p class="text-xs text-purple-200">
+            <h2 class="text-xl font-bold text-white mt-1">{{ $laporan->nama_barang }}</h2>
+            <p class="text-xs text-slate-300">
                 Lokasi Simpan: {{ $laporan->penyimpanan->lokasi_penyimpanan ?? 'Pos Security' }}
             </p>
         </div>
-        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-purple-300 text-2xl font-bold">
+        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-slate-300 text-2xl font-bold">
             <i class="fa-solid fa-handshake"></i>
         </div>
     </div>

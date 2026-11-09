@@ -82,7 +82,7 @@
             -webkit-backdrop-filter: blur(14px);
         }
         .hero-gradient {
-            background: radial-gradient(circle at 10% 20%, rgba(30, 58, 138, 0.08) 0%, rgba(248, 250, 252, 1) 90%);
+            background-color: #f8fafc;
         }
         @view-transition {
             navigation: auto;
@@ -92,7 +92,7 @@
 <body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-brand-ubsi via-blue-800 to-indigo-900 text-white text-xs py-2 px-4 text-center font-medium shadow-sm">
+    <div class="bg-brand-ubsi text-white text-xs py-2 px-4 text-center font-medium shadow-sm">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <span class="hidden sm:inline-flex items-center gap-1.5 text-blue-200">
                 <i class="fa-solid fa-graduation-cap text-amber-400"></i> Universitas Bina Sarana Informatika

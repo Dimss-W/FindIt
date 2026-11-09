@@ -128,7 +128,7 @@
         <div class="flex items-center gap-2 pt-1">
             <button type="button" 
                     @click="triggerInstall()"
-                    class="flex-1 py-2 px-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-brand-ubsi to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white text-xs font-bold shadow-md shadow-blue-900/40 active:scale-95 transition-all flex items-center justify-center gap-2">
+                    class="flex-1 py-2 px-3.5 rounded-xl bg-brand-ubsi hover:bg-blue-900 text-white text-xs font-bold shadow-sm active:scale-95 transition-all flex items-center justify-center gap-2">
                 <i class="fa-solid fa-cloud-arrow-down text-amber-300 text-xs"></i>
                 <span>Instal Sekarang</span>
             </button>

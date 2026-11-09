@@ -8,8 +8,8 @@
         
         <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50">
             <div class="text-center mb-8">
-                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-ubsi to-blue-600 flex items-center justify-center text-white text-2xl font-black mx-auto mb-3 shadow-lg shadow-blue-500/20">
-                    <i class="fa-solid fa-user-plus text-amber-300"></i>
+                <div class="w-14 h-14 rounded-2xl bg-brand-ubsi flex items-center justify-center text-white text-2xl font-black mx-auto mb-3 shadow-md">
+                    <i class="fa-solid fa-user-plus text-white"></i>
                 </div>
                 <h2 class="text-2xl font-black text-slate-900 tracking-tight">Registrasi Akun Mahasiswa</h2>
                 <p class="text-xs text-slate-500 mt-1">Daftarkan diri Anda untuk melacak barang hilang & mengajukan klaim</p>

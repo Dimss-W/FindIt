@@ -18,7 +18,7 @@
 
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight sm:leading-tight">
                 Kehilangan Barang di Kampus? <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-ubsi via-blue-600 to-indigo-700">Temukan Kembali</span> Bersama FindIt.
+                <span class="text-brand-ubsi">Temukan Kembali</span> Bersama FindIt.
             </h1>
 
             <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
@@ -369,7 +369,7 @@
 </section>
 
 <!-- Multi-Campus Banner -->
-<section class="py-16 bg-gradient-to-tr from-brand-ubsi to-blue-900 text-white">
+<section class="py-16 bg-brand-ubsi text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div class="space-y-3 max-w-2xl text-center lg:text-left">

@@ -174,7 +174,7 @@
      x-init="initScanner()">
 
     <!-- Page Header Banner -->
-    <div class="p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-brand-ubsi to-slate-900 text-white shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-blue-900/40">
+    <div class="p-6 rounded-3xl bg-brand-ubsi text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-blue-900">
         <div>
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30 mb-2">
                 <i class="fa-solid fa-qrcode"></i> Fitur Verifikasi Pengambilan Resmi
@@ -430,7 +430,7 @@
                     <!-- Submit Handover Button -->
                     <button type="submit" 
                             :disabled="isSubmitting"
-                            class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white text-xs font-bold shadow-lg shadow-emerald-600/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50">
+                            class="w-full py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50">
                         <template x-if="!isSubmitting">
                             <span class="flex items-center gap-2">
                                 <i class="fa-solid fa-handshake text-base"></i>

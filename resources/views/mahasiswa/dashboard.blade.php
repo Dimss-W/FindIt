@@ -6,7 +6,7 @@
 <div class="space-y-8 max-w-7xl mx-auto">
     
     <!-- Welcome Banner -->
-    <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-brand-ubsi via-blue-900 to-indigo-900 text-white shadow-xl shadow-blue-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
+    <div class="p-6 sm:p-8 rounded-3xl bg-brand-ubsi text-white shadow-xl shadow-blue-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
         <div class="space-y-2 relative z-10">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-semibold backdrop-blur-sm">
                 <i class="fa-solid fa-graduation-cap"></i> Mahasiswa Aktif UBSI

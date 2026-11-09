@@ -6,7 +6,7 @@
 <div class="space-y-8 max-w-7xl mx-auto">
     
     <!-- Admin Header Banner -->
-    <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-950 via-brand-ubsi to-blue-900 text-white shadow-xl shadow-blue-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
+    <div class="p-6 sm:p-8 rounded-3xl bg-brand-ubsi text-white shadow-xl shadow-blue-950/10 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
         <div class="space-y-2 relative z-10">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-bold">
                 <i class="fa-solid fa-crown"></i> Master Control Panel
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Quick Operational Action Hub (Admin Handling Custody & Returns) -->
-    <div class="bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-white p-6 sm:p-7 rounded-3xl border border-blue-100 shadow-sm space-y-4">
+    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div class="flex items-center gap-2.5">
                 <div class="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xs shadow-sm">

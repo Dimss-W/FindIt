@@ -222,7 +222,7 @@
                     <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-3 pt-4 pb-1">Layanan Terpadu</div>
 
                     <a href="{{ route('mahasiswa.lapor.hub') }}" 
-                       class="flex items-center justify-between px-3 py-2.5 rounded-xl transition-all {{ request()->routeIs('mahasiswa.lapor.*') ? 'bg-gradient-to-r from-rose-600 to-amber-600 text-white font-semibold shadow-md shadow-rose-600/30' : 'hover:bg-slate-800 hover:text-white' }}">
+                       class="flex items-center justify-between px-3 py-2.5 rounded-xl transition-all {{ request()->routeIs('mahasiswa.lapor.*') ? 'bg-rose-700 text-white font-semibold shadow-sm' : 'hover:bg-slate-800 hover:text-white' }}">
                         <div class="flex items-center gap-3">
                             <i class="fa-solid fa-circle-plus w-5 text-center text-amber-400"></i>
                             <span>Pusat Pelaporan</span>
@@ -267,7 +267,7 @@
                     <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-3 pt-4 pb-1">Ruang Kerja Terpadu</div>
 
                     <a href="{{ route('petugas.inventaris.hub') }}" 
-                       class="flex items-center justify-between px-3 py-2.5 rounded-xl transition-all {{ request()->routeIs('petugas.inventaris.*') || request()->routeIs('petugas.menunggu.verifikasi') || request()->routeIs('petugas.barang.diamankan') || request()->routeIs('petugas.laporan.hilang') || request()->routeIs('petugas.smart.matching') ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-md shadow-blue-600/30' : 'hover:bg-slate-800 hover:text-white' }}">
+                       class="flex items-center justify-between px-3 py-2.5 rounded-xl transition-all {{ request()->routeIs('petugas.inventaris.*') || request()->routeIs('petugas.menunggu.verifikasi') || request()->routeIs('petugas.barang.diamankan') || request()->routeIs('petugas.laporan.hilang') || request()->routeIs('petugas.smart.matching') ? 'bg-blue-800 text-white font-semibold shadow-sm' : 'hover:bg-slate-800 hover:text-white' }}">
                         <div class="flex items-center gap-3">
                             <i class="fa-solid fa-boxes-stacked w-5 text-center text-cyan-400"></i>
                             <div class="leading-tight">
@@ -278,7 +278,7 @@
                     </a>
 
                     <a href="{{ route('petugas.serah_terima.hub') }}" 
-                       class="flex items-center justify-between px-3 py-2.5 rounded-xl transition-all {{ request()->routeIs('petugas.serah_terima.*') || request()->routeIs('petugas.klaim.*') || request()->routeIs('petugas.scan.qr') || request()->routeIs('petugas.barang.siap_diambil') || request()->routeIs('petugas.riwayat.pengembalian') ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold shadow-md shadow-emerald-600/30' : 'hover:bg-slate-800 hover:text-white' }}">
+                       class="flex items-center justify-between px-3 py-2.5 rounded-xl transition-all {{ request()->routeIs('petugas.serah_terima.*') || request()->routeIs('petugas.klaim.*') || request()->routeIs('petugas.scan.qr') || request()->routeIs('petugas.barang.siap_diambil') || request()->routeIs('petugas.riwayat.pengembalian') ? 'bg-emerald-800 text-white font-semibold shadow-sm' : 'hover:bg-slate-800 hover:text-white' }}">
                         <div class="flex items-center gap-3">
                             <i class="fa-solid fa-qrcode w-5 text-center text-emerald-400"></i>
                             <div class="leading-tight">
@@ -563,7 +563,7 @@
 
                 <!-- Elevated Lapor Button -->
                 <div class="relative -top-5" x-data="{ openLaporMenu: false }">
-                    <button @click="openLaporMenu = !openLaporMenu" class="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-ubsi to-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-600/40 border-2 border-white focus:outline-none active:scale-95 transition-transform">
+                    <button @click="openLaporMenu = !openLaporMenu" class="w-12 h-12 rounded-full bg-brand-ubsi hover:bg-blue-900 text-white flex items-center justify-center shadow-lg shadow-blue-950/30 border-2 border-white focus:outline-none active:scale-95 transition-transform">
                         <i class="fa-solid fa-plus text-xl"></i>
                     </button>
 
