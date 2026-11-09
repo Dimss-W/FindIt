@@ -368,6 +368,138 @@
     </div>
 </section>
 
+<!-- Tanya Jawab Seputar SOP & Prosedur Kampus (FAQ) -->
+<section id="faq-section" class="py-20 bg-slate-50 border-t border-slate-200/80" x-data="{ activeFaq: null }">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <div class="text-center space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-ubsi text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-circle-question"></i> Prosedur & Tata Tertib
+            </div>
+            <h2 class="text-3xl font-black text-slate-900 tracking-tight">
+                Tanya Jawab Layanan Lost & Found Kampus
+            </h2>
+            <p class="text-sm text-slate-600 max-w-xl mx-auto">
+                Panduan resmi operasional, ketentuan penyimpanan, dan prosedur verifikasi kepemilikan barang di Universitas Bina Sarana Informatika.
+            </p>
+        </div>
+
+        <div class="space-y-3">
+            <!-- FAQ 1 -->
+            <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-xs transition-all">
+                <button type="button" 
+                        @click="activeFaq = (activeFaq === 1 ? null : 1)" 
+                        class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm text-slate-900 hover:text-brand-ubsi transition-colors">
+                    <span class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-50 text-brand-ubsi flex items-center justify-center text-xs flex-shrink-0">1</span>
+                        <span>Berapa lama batas waktu penyimpanan barang temuan di Pos Pengamanan?</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200" 
+                       :class="activeFaq === 1 ? 'rotate-180 text-brand-ubsi' : ''"></i>
+                </button>
+                <div x-show="activeFaq === 1" x-collapse x-cloak class="px-5 pb-5 pt-1 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                    Berdasarkan ketentuan operasional inventaris kampus UBSI, barang temuan disimpan di loker Pos Pengamanan maksimal selama <strong>30 hari kalender</strong>. Jika dalam kurun waktu tersebut tidak ada pihak yang mengajukan klaim terverifikasi, barang akan diserahkan secara resmi ke Biro Kemahasiswaan untuk dialokasikan pada program donasi atau kegiatan sosial kampus sesuai SK Rektor.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-xs transition-all">
+                <button type="button" 
+                        @click="activeFaq = (activeFaq === 2 ? null : 2)" 
+                        class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm text-slate-900 hover:text-brand-ubsi transition-colors">
+                    <span class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-50 text-brand-ubsi flex items-center justify-center text-xs flex-shrink-0">2</span>
+                        <span>Bagaimana jika barang saya tertinggal di kampus UBSI cabang lain?</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200" 
+                       :class="activeFaq === 2 ? 'rotate-180 text-brand-ubsi' : ''"></i>
+                </button>
+                <div x-show="activeFaq === 2" x-collapse x-cloak class="px-5 pb-5 pt-1 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                    Sistem FINDIT mengintegrasikan seluruh <strong>27 unit kampus UBSI di Indonesia</strong> (wilayah Jabodetabek dan PSDKU seperti Sukabumi, Solo, Yogyakarta, Pontianak). Anda cukup memilih unit kampus tempat kejadian saat membuat laporan atau mencari barang. Pengambilan fisik tetap dilayani oleh petugas di Pos Pengamanan unit kampus tempat barang diamankan.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-xs transition-all">
+                <button type="button" 
+                        @click="activeFaq = (activeFaq === 3 ? null : 3)" 
+                        class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm text-slate-900 hover:text-brand-ubsi transition-colors">
+                    <span class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-50 text-brand-ubsi flex items-center justify-center text-xs flex-shrink-0">3</span>
+                        <span>Dokumen dan syarat apa saja yang wajib dibawa saat mengambil barang?</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200" 
+                       :class="activeFaq === 3 ? 'rotate-180 text-brand-ubsi' : ''"></i>
+                </button>
+                <div x-show="activeFaq === 3" x-collapse x-cloak class="px-5 pb-5 pt-1 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50 space-y-1.5">
+                    <p>Saat proses serah terima fisik di Pos Pengamanan Kampus, Anda wajib:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-700">
+                        <li>Membawa <strong>Kartu Tanda Mahasiswa (KTM)</strong> atau KTP asli untuk verifikasi data pemohon.</li>
+                        <li>Memperlihatkan <strong>Tiket Digital Serah Terima (QR Code)</strong> dari sistem FINDIT yang telah disetujui.</li>
+                        <li>Khusus barang elektronik (Laptop/HP): Wajib membuka kunci layar (passcode/pola) di depan petugas.</li>
+                        <li>Khusus kendaraan / helm: Wajib memperlihatkan STNK asli yang bersesuaian.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-xs transition-all">
+                <button type="button" 
+                        @click="activeFaq = (activeFaq === 4 ? null : 4)" 
+                        class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm text-slate-900 hover:text-brand-ubsi transition-colors">
+                    <span class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-50 text-brand-ubsi flex items-center justify-center text-xs flex-shrink-0">4</span>
+                        <span>Bagaimana membuktikan kepemilikan jika nota atau dus barang sudah hilang?</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200" 
+                       :class="activeFaq === 4 ? 'rotate-180 text-brand-ubsi' : ''"></i>
+                </button>
+                <div x-show="activeFaq === 4" x-collapse x-cloak class="px-5 pb-5 pt-1 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                    Pembuktian kepemilikan tidak mutlak memerlukan nota pembelian. Anda dapat menjelaskan ciri fisik khusus yang tersembunyi (misalnya stiker di balik casing, warna gantungan kunci, isi khusus dalam dompet, nomor IMEI, atau foto dokumentasi lama Anda bersama barang tersebut).
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-xs transition-all">
+                <button type="button" 
+                        @click="activeFaq = (activeFaq === 5 ? null : 5)" 
+                        class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm text-slate-900 hover:text-brand-ubsi transition-colors">
+                    <span class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-50 text-brand-ubsi flex items-center justify-center text-xs flex-shrink-0">5</span>
+                        <span>Kapan jam operasional loket pengambilan barang di pos pengamanan?</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200" 
+                       :class="activeFaq === 5 ? 'rotate-180 text-brand-ubsi' : ''"></i>
+                </button>
+                <div x-show="activeFaq === 5" x-collapse x-cloak class="px-5 pb-5 pt-1 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                    Pos Pengamanan dan Layanan Kampus UBSI melayani pengambilan barang setiap hari kerja:<br>
+                    <strong>&bull; Senin – Jumat:</strong> Pukul 08.00 – 17.00 WIB<br>
+                    <strong>&bull; Sabtu:</strong> Pukul 08.00 – 12.00 WIB<br>
+                    <span class="text-slate-400 italic">*(Hari Minggu dan Hari Libur Nasional layanan loket tutup).*</span>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-xs transition-all">
+                <button type="button" 
+                        @click="activeFaq = (activeFaq === 6 ? null : 6)" 
+                        class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm text-slate-900 hover:text-brand-ubsi transition-colors">
+                    <span class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-blue-50 text-brand-ubsi flex items-center justify-center text-xs flex-shrink-0">6</span>
+                        <span>Saya menemukan barang milik orang lain di kampus, apa yang harus saya lakukan?</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200" 
+                       :class="activeFaq === 6 ? 'rotate-180 text-brand-ubsi' : ''"></i>
+                </button>
+                <div x-show="activeFaq === 6" x-collapse x-cloak class="px-5 pb-5 pt-1 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                    Silakan isi formulir <strong>Laporkan Temuan</strong> di FINDIT, lalu serahkan fisik barang tersebut ke Pos Pengamanan atau Staf Layanan Kampus terdekat dalam waktu 1x24 jam. Petugas akan mencatat kondisi fisik dan menyimpannya di loker brankas kampus hingga pemilik sah mengajukan klaim.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <!-- Multi-Campus Banner -->
 <section class="py-16 bg-brand-ubsi text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

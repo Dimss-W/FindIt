@@ -137,6 +137,9 @@
                     <a href="{{ route('search', ['jenis_laporan' => 'DITEMUKAN']) }}" class="hover:text-brand-ubsi transition-colors">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block mr-1"></span> Barang Ditemukan
                     </a>
+                    <a href="{{ route('landing') }}#faq-section" class="hover:text-brand-ubsi transition-colors">
+                        <i class="fa-solid fa-circle-question text-amber-500 mr-1"></i> FAQ & SOP
+                    </a>
                 </nav>
 
                 <!-- Auth / Action Buttons -->
@@ -236,13 +239,37 @@
                     </ul>
                 </div>
 
-                <!-- Multi Campus Highlights -->
+                <!-- Ekosistem Digital Resmi UBSI -->
                 <div>
-                    <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Cakupan Multi-Kampus</h4>
-                    <ul class="space-y-2 text-xs">
-                        <li><span class="text-amber-400 font-medium">18 Kampus Utama</span> (Jabodetabek)</li>
-                        <li><span class="text-blue-400 font-medium">9 Kampus PSDKU</span> (Sukabumi, Solo, Yogya, dll.)</li>
-                        <li>Terhubung langsung dengan Admin & Bagian Layanan Kampus UBSI</li>
+                    <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Ekosistem Digital UBSI</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li>
+                            <a href="https://students.bsi.ac.id" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-amber-400 w-3.5"></i>
+                                <span>Ruang Mahasiswa (KRS & Nilai)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://elearning.bsi.ac.id" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-laptop text-blue-400 w-3.5"></i>
+                                <span>Portal E-Learning UBSI</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://bsi.ac.id" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-building-columns text-emerald-400 w-3.5"></i>
+                                <span>Website Resmi bsi.ac.id</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pendaftaran.bsi.ac.id" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-user-plus text-purple-400 w-3.5"></i>
+                                <span>Penerimaan Mahasiswa Baru</span>
+                            </a>
+                        </li>
+                        <li class="pt-1 text-[11px] text-slate-500">
+                            Terhubung di 27 unit kampus utama & PSDKU se-Indonesia.
+                        </li>
                     </ul>
                 </div>
 
@@ -268,9 +295,9 @@
             <div class="mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 mb-16 sm:mb-0">
                 <p>&copy; {{ date('Y') }} FINDIT UBSI — Universitas Bina Sarana Informatika. Hak Cipta Dilindungi.</p>
                 <div class="flex items-center gap-6">
-                    <span>Privasi</span>
-                    <span>Ketentuan Layanan</span>
-                    <span>Bantuan</span>
+                    <a href="{{ route('landing') }}#faq-section" class="hover:text-white transition-colors">Tanya Jawab (FAQ)</a>
+                    <a href="https://students.bsi.ac.id" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ruang Mahasiswa</a>
+                    <a href="https://bsi.ac.id" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Portal Kampus</a>
                 </div>
             </div>
         </div>

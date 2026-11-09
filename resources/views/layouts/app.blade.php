@@ -346,6 +346,26 @@
                     </a>
                 @endif
 
+                <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-3 pt-4 pb-1">Tautan Portal UBSI</div>
+
+                <a href="https://students.bsi.ac.id" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-between px-3 py-2 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-all text-xs group">
+                    <div class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-graduation-cap text-amber-400 w-4 text-center"></i>
+                        <span>Ruang Mahasiswa</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-500 group-hover:text-slate-300"></i>
+                </a>
+
+                <a href="https://elearning.bsi.ac.id" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-between px-3 py-2 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-all text-xs group">
+                    <div class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-laptop text-blue-400 w-4 text-center"></i>
+                        <span>E-Learning UBSI</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-500 group-hover:text-slate-300"></i>
+                </a>
+
                 <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-3 pt-4 pb-1">Akun</div>
 
                 <a href="{{ route('profile') }}" 
