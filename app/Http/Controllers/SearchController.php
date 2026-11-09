@@ -56,12 +56,16 @@ class SearchController extends Controller
 
         // Kampus yang memiliki laporan aktif untuk tombol filter cepat mahasiswa
         $kampusWithReports = Kampus::where('status', 'aktif')
+            ->whereHas('laporanBarang', function ($q) use ($request) {
+                if ($request->filled('jenis_laporan')) {
+                    $q->where('jenis_laporan', $request->jenis_laporan);
+                }
+            })
             ->withCount(['laporanBarang' => function ($q) use ($request) {
                 if ($request->filled('jenis_laporan')) {
                     $q->where('jenis_laporan', $request->jenis_laporan);
                 }
             }])
-            ->having('laporan_barang_count', '>', 0)
             ->orderByDesc('laporan_barang_count')
             ->get();
 

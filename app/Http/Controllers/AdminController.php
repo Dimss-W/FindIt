@@ -36,8 +36,8 @@ class AdminController extends Controller
         ];
 
         // Laporan per Kampus
-        $laporanPerKampus = Kampus::withCount('laporanBarang')
-            ->having('laporan_barang_count', '>', 0)
+        $laporanPerKampus = Kampus::has('laporanBarang')
+            ->withCount('laporanBarang')
             ->orderByDesc('laporan_barang_count')
             ->take(8)
             ->get();

@@ -14,7 +14,7 @@
             <p class="text-xs text-slate-500 mt-1">Barang temuan yang telah diverifikasi fisik dan disimpan aman menunggu klaim pemilik</p>
         </div>
         <a href="{{ route('petugas.smart.matching') }}" class="px-4 py-2.5 rounded-xl bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white text-xs font-bold transition-all flex items-center gap-1.5">
-            <i class="fa-solid fa-bolt text-amber-500"></i> Cek Smart Matching
+            <i class="fa-solid fa-code-compare text-blue-600"></i> Pencocokan Laporan
         </a>
     </div>
 

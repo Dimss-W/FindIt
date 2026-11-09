@@ -27,9 +27,9 @@
     <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-900 text-xs flex items-start gap-3">
         <i class="fa-solid fa-user-shield text-amber-500 text-base mt-0.5 flex-shrink-0"></i>
         <div class="space-y-1">
-            <span class="font-bold block">Status Awal: 🟡 MENUNGGU VERIFIKASI ADMIN</span>
+            <span class="font-bold block">Status Awal: MENUNGGU VERIFIKASI ADMIN</span>
             <p class="leading-relaxed">
-                Setelah mengirim laporan ini, <strong>segera serahkan fisik barang kepada Admin / Staf Layanan Kampus</strong> di kantor pelayanan kampus terkait. Admin akan memverifikasi kesesuaian fisik dan mengubah status menjadi <strong>🟢 BARANG DIAMANKAN</strong>.
+                Setelah mengirim laporan ini, <strong>segera serahkan fisik barang kepada Admin / Staf Layanan Kampus</strong> di kantor pelayanan kampus terkait. Admin akan memverifikasi kesesuaian fisik dan mengubah status menjadi <strong>BARANG DIAMANKAN</strong>.
             </p>
         </div>
     </div>

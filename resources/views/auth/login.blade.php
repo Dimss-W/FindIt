@@ -240,7 +240,7 @@
                     @click="toggleBgDim()" 
                     title="Ubah kecerahan background gedung"
                     class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 active:scale-95 backdrop-blur-md border border-white/25 text-white text-[11px] font-semibold shadow-lg transition-all">
-                <i class="fa-solid fa-wand-magic-sparkles text-amber-300 text-xs"></i>
+                <i class="fa-solid fa-sliders text-white/80 text-xs"></i>
                 <span class="hidden sm:inline">Background:</span>
                 <span class="font-bold text-amber-300" x-text="bgDimLevel === 'normal' ? 'Normal' : (bgDimLevel === 'clear' ? 'Jernih (HD)' : 'Fokus')"></span>
             </button>
@@ -317,10 +317,10 @@
             <div class="px-2.5 py-1 rounded-xl bg-blue-50/70 border border-blue-100 text-[10px] text-blue-900 flex items-center justify-between">
                 <span class="flex items-center gap-1.5 font-medium">
                     <template x-if="activeTab === 'mahasiswa'">
-                        <span>🎓 Akses Mahasiswa via NIM & Tanggal Lahir</span>
+                        <span>Akses Mahasiswa via NIM & Tanggal Lahir</span>
                     </template>
                     <template x-if="activeTab === 'admin'">
-                        <span>🛡️ Akses Petugas & Administrator Kampus</span>
+                        <span>Akses Petugas & Administrator Kampus</span>
                     </template>
                 </span>
                 <span class="text-slate-400">FINDIT</span>
@@ -330,7 +330,7 @@
             <div class="p-2 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
                 <div class="flex items-center justify-between text-[10px]">
                     <span class="font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1">
-                        <i class="fa-solid fa-bolt text-amber-500"></i> Akun Uji Coba:
+                        <i class="fa-solid fa-user-check text-slate-500"></i> Akun Uji Coba:
                     </span>
                     <span class="text-slate-400">Klik untuk isi instan</span>
                 </div>
@@ -339,21 +339,21 @@
                     <button type="button" 
                             @click="setDemo('12220199', '2004-05-14', 'mahasiswa', 'Mahasiswa Dimas')"
                             class="py-1 px-1.5 rounded-xl bg-white border border-slate-200 text-center hover:border-emerald-400 hover:bg-emerald-50/25 active:scale-95 transition-all group">
-                        <div class="text-[10px] font-bold text-slate-800 group-hover:text-emerald-700 truncate">🎓 Mahasiswa</div>
+                        <div class="text-[10px] font-bold text-slate-800 group-hover:text-emerald-700 truncate">Mahasiswa</div>
                         <div class="text-[9px] text-slate-400 font-mono">12220199</div>
                     </button>
 
                     <button type="button" 
                             @click="setDemo('admin@bsi.ac.id', 'password123', 'admin', 'Admin Pusat')"
                             class="py-1 px-1.5 rounded-xl bg-white border border-slate-200 text-center hover:border-amber-400 hover:bg-amber-50/25 active:scale-95 transition-all group">
-                        <div class="text-[10px] font-bold text-slate-800 group-hover:text-amber-700 truncate">👑 Admin Pusat</div>
+                        <div class="text-[10px] font-bold text-slate-800 group-hover:text-amber-700 truncate">Admin Pusat</div>
                         <div class="text-[9px] text-slate-400">27 Kampus</div>
                     </button>
 
                     <button type="button" 
                             @click="setDemo('admin.krm@bsi.ac.id', 'password123', 'admin', 'Staf Kramat 98')"
                             class="py-1 px-1.5 rounded-xl bg-white border border-slate-200 text-center hover:border-blue-400 hover:bg-blue-50/25 active:scale-95 transition-all group">
-                        <div class="text-[10px] font-bold text-slate-800 group-hover:text-brand-ubsi truncate">🏢 Staf Kampus</div>
+                        <div class="text-[10px] font-bold text-slate-800 group-hover:text-brand-ubsi truncate">Staf Kampus</div>
                         <div class="text-[9px] text-slate-400 truncate">Kramat 98</div>
                     </button>
                 </div>
@@ -472,7 +472,7 @@
                                 <i class="fa-regular fa-calendar-check text-brand-ubsi"></i>
                                 <span>Tanggal: <strong class="text-brand-ubsi font-bold" x-text="dateParsedText"></strong></span>
                             </span>
-                            <span class="text-[9px] text-emerald-600 font-bold">✓ Terformat</span>
+                            <span class="text-[9px] text-emerald-600 font-bold">Terformat</span>
                         </div>
                     </template>
 

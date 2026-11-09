@@ -37,9 +37,9 @@
         <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200/80 text-rose-800 text-xs flex items-start gap-3">
             <i class="fa-solid fa-circle-info text-rose-500 text-base mt-0.5 flex-shrink-0"></i>
             <div class="space-y-1">
-                <span class="font-bold block">Status Laporan: 🔴 SEDANG DICARI</span>
+                <span class="font-bold block">Status Laporan: SEDANG DICARI</span>
                 <p class="leading-relaxed text-[11px]">
-                    Laporan ini akan langsung masuk ke dashboard <strong>staf kampus yang Anda pilih</strong> dan dicocokkan otomatis (*Smart Auto-Matching*) dengan barang yang telah diamankan petugas.
+                    Laporan ini akan langsung masuk ke dashboard <strong>staf kampus yang Anda pilih</strong> dan dicocokkan secara otomatis oleh sistem dengan barang yang telah diamankan petugas.
                 </p>
             </div>
         </div>
@@ -149,7 +149,7 @@
         <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs flex items-start gap-3">
             <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5 flex-shrink-0"></i>
             <div class="space-y-1">
-                <span class="font-bold block">Status Awal: 🟡 MENUNGGU VERIFIKASI FISIK</span>
+                <span class="font-bold block">Status Awal: MENUNGGU VERIFIKASI FISIK</span>
                 <p class="leading-relaxed text-[11px]">
                     Setelah mengisi form, mohon segera serahkan fisik barang kepada <strong>Petugas Layanan Kampus terkait</strong> agar dapat diamankan di loker resmi kampus.
                 </p>

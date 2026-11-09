@@ -41,11 +41,11 @@
 
             <select name="status" class="px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700 focus:outline-none">
                 <option value="">Semua Status</option>
-                <option value="SEDANG DICARI" {{ request('status') === 'SEDANG DICARI' ? 'selected' : '' }}>🔴 Sedang Dicari</option>
-                <option value="MENUNGGU VERIFIKASI" {{ request('status') === 'MENUNGGU VERIFIKASI' ? 'selected' : '' }}>🟡 Menunggu Verifikasi</option>
-                <option value="BARANG DIAMANKAN" {{ request('status') === 'BARANG DIAMANKAN' ? 'selected' : '' }}>🟢 Barang Diamankan</option>
-                <option value="SIAP DIAMBIL" {{ request('status') === 'SIAP DIAMBIL' ? 'selected' : '' }}>🔵 Siap Diambil</option>
-                <option value="DIKEMBALIKAN" {{ request('status') === 'DIKEMBALIKAN' ? 'selected' : '' }}>🎉 Dikembalikan</option>
+                <option value="SEDANG DICARI" {{ request('status') === 'SEDANG DICARI' ? 'selected' : '' }}>Sedang Dicari</option>
+                <option value="MENUNGGU VERIFIKASI" {{ request('status') === 'MENUNGGU VERIFIKASI' ? 'selected' : '' }}>Menunggu Verifikasi</option>
+                <option value="BARANG DIAMANKAN" {{ request('status') === 'BARANG DIAMANKAN' ? 'selected' : '' }}>Barang Diamankan</option>
+                <option value="SIAP DIAMBIL" {{ request('status') === 'SIAP DIAMBIL' ? 'selected' : '' }}>Siap Diambil</option>
+                <option value="DIKEMBALIKAN" {{ request('status') === 'DIKEMBALIKAN' ? 'selected' : '' }}>Dikembalikan</option>
             </select>
 
             <button type="submit" class="px-4 py-2.5 bg-brand-ubsi hover:bg-blue-900 text-white text-xs font-bold rounded-xl transition-all">

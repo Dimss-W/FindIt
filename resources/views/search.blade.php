@@ -101,11 +101,11 @@
                         <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Status Barang</label>
                         <select name="status" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-none transition-all">
                             <option value="">Semua Status</option>
-                            <option value="SEDANG DICARI" {{ request('status') === 'SEDANG DICARI' ? 'selected' : '' }}>🔴 Sedang Dicari</option>
-                            <option value="MENUNGGU VERIFIKASI" {{ request('status') === 'MENUNGGU VERIFIKASI' ? 'selected' : '' }}>🟡 Menunggu Verifikasi</option>
-                            <option value="BARANG DIAMANKAN" {{ request('status') === 'BARANG DIAMANKAN' ? 'selected' : '' }}>🟢 Barang Diamankan</option>
-                            <option value="SIAP DIAMBIL" {{ request('status') === 'SIAP DIAMBIL' ? 'selected' : '' }}>🔵 Siap Diambil</option>
-                            <option value="DIKEMBALIKAN" {{ request('status') === 'DIKEMBALIKAN' ? 'selected' : '' }}>🎉 Dikembalikan</option>
+                            <option value="SEDANG DICARI" {{ request('status') === 'SEDANG DICARI' ? 'selected' : '' }}>Sedang Dicari</option>
+                            <option value="MENUNGGU VERIFIKASI" {{ request('status') === 'MENUNGGU VERIFIKASI' ? 'selected' : '' }}>Menunggu Verifikasi</option>
+                            <option value="BARANG DIAMANKAN" {{ request('status') === 'BARANG DIAMANKAN' ? 'selected' : '' }}>Barang Diamankan</option>
+                            <option value="SIAP DIAMBIL" {{ request('status') === 'SIAP DIAMBIL' ? 'selected' : '' }}>Siap Diambil</option>
+                            <option value="DIKEMBALIKAN" {{ request('status') === 'DIKEMBALIKAN' ? 'selected' : '' }}>Dikembalikan</option>
                         </select>
                     </div>
 

@@ -29,11 +29,11 @@
         </a>
         <a href="{{ route('mahasiswa.laporan.saya', ['jenis' => 'HILANG']) }}" 
            class="px-4 py-2 rounded-xl transition-all {{ request('jenis') === 'HILANG' ? 'bg-rose-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100' }}">
-            🔴 Barang Hilang
+            Barang Hilang
         </a>
         <a href="{{ route('mahasiswa.laporan.saya', ['jenis' => 'DITEMUKAN']) }}" 
            class="px-4 py-2 rounded-xl transition-all {{ request('jenis') === 'DITEMUKAN' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100' }}">
-            🟢 Barang Ditemukan
+            Barang Ditemukan
         </a>
     </div>
 

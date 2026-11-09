@@ -276,7 +276,7 @@ class PetugasController extends Controller
             // Notifikasi ke mahasiswa pemilik klaim
             Notifikasi::create([
                 'user_id' => $klaim->user_id,
-                'judul' => '🎉 Klaim Disetujui - Tiket Pengambilan Terbit',
+                'judul' => 'Klaim Disetujui - Tiket Pengambilan Terbit',
                 'pesan' => "Selamat! Klaim Anda untuk barang \"{$klaim->laporan->nama_barang}\" telah DISETUJUI dengan Kode Tiket: {$kodeTiket}. Tunjukkan QR Code tiket di aplikasi Anda ke ruang staf/admin kampus untuk serah terima barang.",
                 'link' => route('mahasiswa.laporan.detail', $klaim->laporan_id),
                 'is_read' => false,
@@ -291,7 +291,7 @@ class PetugasController extends Controller
             // Notifikasi penolakan
             Notifikasi::create([
                 'user_id' => $klaim->user_id,
-                'judul' => '❌ Pengajuan Klaim Ditolak',
+                'judul' => 'Pengajuan Klaim Ditolak',
                 'pesan' => "Mohon maaf, pengajuan klaim Anda untuk barang \"{$klaim->laporan->nama_barang}\" ditolak oleh Petugas Keamanan dengan catatan: \"{$validated['catatan_petugas']}\"",
                 'link' => route('mahasiswa.klaim.saya'),
                 'is_read' => false,
@@ -367,7 +367,7 @@ class PetugasController extends Controller
         // Notifikasi ke penerima
         Notifikasi::create([
             'user_id' => $validated['penerima_id'],
-            'judul' => '🎉 Barang Telah Berhasil Dikembalikan',
+            'judul' => 'Barang Telah Berhasil Dikembalikan',
             'pesan' => "Serah terima barang \"{$laporan->nama_barang}\" telah selesai dengan Nomor BAST: {$nomorBast}. Dokumen berita acara resmi telah terbit.",
             'link' => route('mahasiswa.laporan.detail', $laporan->id),
             'is_read' => false,
@@ -539,7 +539,7 @@ class PetugasController extends Controller
         // Notifikasi ke mahasiswa
         Notifikasi::create([
             'user_id' => $klaim->user_id,
-            'judul' => '🎉 Barang Telah Berhasil Diterima!',
+            'judul' => 'Barang Telah Berhasil Diterima',
             'pesan' => "Serah terima barang \"{$laporan->nama_barang}\" telah selesai dengan Nomor Berita Acara: {$nomorBast}. Terima kasih telah menggunakan FINDIT UBSI.",
             'link' => route('mahasiswa.laporan.detail', $laporan->id),
             'is_read' => false,

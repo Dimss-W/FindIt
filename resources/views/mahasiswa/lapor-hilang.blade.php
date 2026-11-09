@@ -27,7 +27,7 @@
     <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200/80 text-rose-800 text-xs flex items-start gap-3">
         <i class="fa-solid fa-circle-info text-rose-500 text-base mt-0.5 flex-shrink-0"></i>
         <div class="space-y-1">
-            <span class="font-bold block">Status Awal: 🔴 SEDANG DICARI</span>
+            <span class="font-bold block">Status Awal: SEDANG DICARI</span>
             <p class="leading-relaxed">
                 Setelah formulir dikirim, sistem otomatis meng-generate kode laporan resmi (contoh: <strong>FD-{{ date('Y') }}-00001</strong>) dan mencocokkan dengan barang temuan yang sudah diamankan petugas.
             </p>

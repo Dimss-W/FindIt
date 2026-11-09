@@ -166,7 +166,7 @@ class SmartMatchingService
 
                 Notifikasi::create([
                     'user_id' => $matchedItem->user_id,
-                    'judul' => '⚡ Kemungkinan Barang Ditemukan (' . $score . '% Cocok)',
+                    'judul' => 'Kemungkinan Barang Ditemukan (' . $score . '% Cocok)',
                     'pesan' => "Barang yang sesuai dengan laporan kehilangan Anda \"{$matchedItem->nama_barang}\" kemungkinan telah ditemukan di {$newReport->kampus->nama_kampus}. Segera cek dan ajukan klaim jika milik Anda.",
                     'link' => route('mahasiswa.laporan.detail', $newReport->id),
                     'is_read' => false,
@@ -184,7 +184,7 @@ class SmartMatchingService
 
                 Notifikasi::create([
                     'user_id' => $newReport->user_id,
-                    'judul' => '⚡ Kemungkinan Barang Ditemukan (' . $score . '% Cocok)',
+                    'judul' => 'Kemungkinan Barang Ditemukan (' . $score . '% Cocok)',
                     'pesan' => "Ada barang ditemukan \"{$matchedItem->nama_barang}\" di {$matchedItem->kampus->nama_kampus} yang cocok dengan laporan kehilangan Anda. Cek detail dan ajukan klaim.",
                     'link' => route('mahasiswa.laporan.detail', $matchedItem->id),
                     'is_read' => false,

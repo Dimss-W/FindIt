@@ -209,18 +209,18 @@
         <div class="p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-white to-amber-50 border border-amber-200 shadow-sm space-y-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center text-base shadow-md shadow-amber-500/30">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center text-base shadow-md shadow-blue-600/30">
+                        <i class="fa-solid fa-code-compare"></i>
                     </div>
                     <div>
                         <h3 class="text-sm sm:text-base font-bold text-slate-900 flex items-center gap-2">
-                            <span>Smart Auto-Matching: Ditemukan {{ count($matches) }} Barang Berpotensi Cocok!</span>
+                            <span>Pencocokan Sistem: Ditemukan {{ count($matches) }} Barang Berpotensi Cocok</span>
                         </h3>
                         <p class="text-[11px] text-slate-500">Sistem otomatis mencocokkan kemiripan kategori, lokasi kampus, dan waktu kehilangan.</p>
                     </div>
                 </div>
-                <span class="hidden sm:inline-flex px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold border border-amber-200 uppercase">
-                    Rekomendasi Cerdas
+                <span class="hidden sm:inline-flex px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold border border-blue-200 uppercase">
+                    Rekomendasi Sistem
                 </span>
             </div>
 
@@ -366,10 +366,10 @@
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <div class="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-xs">
-                                <i class="fa-solid fa-bolt text-amber-300"></i>
+                                <i class="fa-solid fa-magnifying-glass text-white text-xs"></i>
                             </div>
                             <div>
-                                <h3 class="text-sm font-bold text-slate-900">⚡ Kemungkinan Barang Cocok (Smart Matching)</h3>
+                                <h3 class="text-sm font-bold text-slate-900">Kemungkinan Barang Cocok (Pencocokan Sistem)</h3>
                                 <p class="text-[11px] text-slate-500">Algoritma otomatis membandingkan kampus, kategori, nama, lokasi, dan tanggal</p>
                             </div>
                         </div>

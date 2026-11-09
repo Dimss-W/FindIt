@@ -14,7 +14,7 @@
             <p class="text-xs text-slate-500 mt-1">Daftar laporan barang hilang yang dilaporkan mahasiswa di kampus ini</p>
         </div>
         <a href="{{ route('petugas.smart.matching') }}" class="px-4 py-2.5 rounded-xl bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white text-xs font-bold transition-all flex items-center gap-1.5">
-            <i class="fa-solid fa-bolt text-amber-500"></i> Cocokkan dengan Barang Temuan
+            <i class="fa-solid fa-code-compare text-blue-600"></i> Cocokkan dengan Barang Temuan
         </a>
     </div>
 

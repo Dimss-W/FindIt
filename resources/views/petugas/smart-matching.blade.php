@@ -8,10 +8,10 @@
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
             <h1 class="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
-                <span class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-indigo-600 text-white flex items-center justify-center text-sm shadow-md">
-                    <i class="fa-solid fa-bolt text-amber-200"></i>
+                <span class="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center text-sm shadow-md">
+                    <i class="fa-solid fa-code-compare text-white"></i>
                 </span>
-                Smart Matching: Kecocokan Otomatis
+                Pencocokan Laporan Otomatis
             </h1>
             <p class="text-xs text-slate-500 mt-1">
                 Sistem menghitung kemiripan bobot: Kampus (30%), Kategori (20%), Nama (20%), Lokasi (15%), Tanggal (15%)
@@ -99,9 +99,9 @@
                                 <div class="space-y-3">
                                     <div class="flex items-center justify-between">
                                         <!-- Big Match Badge -->
-                                        <div class="px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-black flex items-center gap-1.5 shadow-xs">
-                                            <i class="fa-solid fa-bolt text-amber-500"></i>
-                                            <span>⚡ Tingkat Kecocokan: {{ $score }}%</span>
+                                        <div class="px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold flex items-center gap-1.5 shadow-xs">
+                                            <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                            <span>Tingkat Kecocokan: {{ $score }}%</span>
                                         </div>
                                         <span class="text-[10px] font-mono font-semibold text-slate-400">{{ $candidate->kode_laporan }}</span>
                                     </div>
@@ -157,7 +157,7 @@
         @empty
             <div class="bg-white p-16 rounded-3xl border border-slate-200/80 text-center space-y-3 shadow-sm">
                 <div class="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-3xl mx-auto">
-                    <i class="fa-solid fa-bolt"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <h3 class="text-base font-bold text-slate-800">Tidak Ada Pasangan Barang yang Cocok Saat Ini</h3>
                 <p class="text-xs text-slate-400 max-w-md mx-auto">

@@ -64,13 +64,13 @@
             <p class="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wider text-center">Ganti Akun Instan (Uji Coba Cepat):</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 <a href="{{ route('demo.switch', 'mahasiswa') }}" class="flex items-center justify-center gap-1.5 px-3 py-2 bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/40 rounded-lg text-xs font-semibold transition">
-                    🎓 Mahasiswa
+                    Mahasiswa
                 </a>
                 <a href="{{ route('demo.switch', 'petugas') }}" class="flex items-center justify-center gap-1.5 px-3 py-2 bg-amber-600/20 hover:bg-amber-600/30 text-amber-300 border border-amber-500/40 rounded-lg text-xs font-semibold transition">
-                    🛡️ Petugas
+                    Petugas
                 </a>
                 <a href="{{ route('demo.switch', 'admin') }}" class="flex items-center justify-center gap-1.5 px-3 py-2 bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/40 rounded-lg text-xs font-semibold transition">
-                    ⚡ Admin
+                    Admin
                 </a>
             </div>
         </div>

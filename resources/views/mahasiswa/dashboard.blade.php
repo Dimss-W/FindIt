@@ -11,7 +11,7 @@
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-semibold backdrop-blur-sm">
                 <i class="fa-solid fa-graduation-cap"></i> Mahasiswa Aktif UBSI
             </span>
-            <h1 class="text-2xl sm:text-3xl font-black tracking-tight">Selamat Datang, {{ $user->name }} 👋</h1>
+            <h1 class="text-2xl sm:text-3xl font-black tracking-tight">Selamat Datang, {{ $user->name }}</h1>
             <p class="text-blue-200 text-xs sm:text-sm max-w-xl">
                 Pantau laporan kehilangan Anda, serahkan barang temuan ke Pos Keamanan kampus, atau ajukan klaim kepemilikan barang yang telah diamankan.
             </p>
@@ -191,12 +191,12 @@
             </div>
 
             <!-- Smart Matching Info Card -->
-            <div class="mt-6 p-4 rounded-2xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200/60 text-xs text-amber-900">
+            <div class="mt-6 p-4 rounded-2xl bg-blue-50/70 border border-blue-200/60 text-xs text-blue-900">
                 <div class="flex items-center gap-2 font-bold mb-1">
-                    <i class="fa-solid fa-bolt text-amber-500"></i>
-                    <span>Fitur Smart Matching</span>
+                    <i class="fa-solid fa-code-compare text-blue-600"></i>
+                    <span>Pencocokan Otomatis</span>
                 </div>
-                <p class="text-[11px] text-amber-800/80 leading-relaxed">
+                <p class="text-[11px] text-blue-800/80 leading-relaxed">
                     Sistem FINDIT otomatis mendeteksi kecocokan laporan kehilangan Anda dengan barang yang diamankan security.
                 </p>
             </div>

@@ -182,18 +182,18 @@
                 <div class="grid grid-cols-3 gap-1">
                     <a href="{{ route('demo.switch', 'mahasiswa') }}" 
                        class="flex items-center justify-center py-1.5 rounded-lg text-[11px] font-semibold transition {{ Auth::user()->isMahasiswa() ? 'bg-blue-600 text-white font-bold shadow-sm' : 'bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-700' }}"
-                       title="Beralih ke Akun Mahasiswa (Dimas)">
-                        🎓 Mhs
+                       title="Beralih ke Akun Mahasiswa">
+                        Mahasiswa
                     </a>
                     <a href="{{ route('demo.switch', 'petugas') }}" 
                        class="flex items-center justify-center py-1.5 rounded-lg text-[11px] font-semibold transition {{ Auth::user()->isPetugas() ? 'bg-amber-600 text-white font-bold shadow-sm' : 'bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-700' }}"
                        title="Beralih ke Akun Petugas Layanan Kampus">
-                        🛡️ Staf
+                        Petugas
                     </a>
                     <a href="{{ route('demo.switch', 'admin') }}" 
                        class="flex items-center justify-center py-1.5 rounded-lg text-[11px] font-semibold transition {{ Auth::user()->isAdmin() ? 'bg-purple-600 text-white font-bold shadow-sm' : 'bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-700' }}"
-                       title="Beralih ke Akun Administrator Pusat">
-                        ⚡ Admin
+                       title="Beralih ke Akun Administrator">
+                        Admin
                     </a>
                 </div>
             </div>

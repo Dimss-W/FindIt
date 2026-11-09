@@ -60,8 +60,8 @@
 
         <a href="?tab=matching" class="p-4 rounded-2xl border transition-all text-left flex flex-col justify-between {{ $activeTab === 'matching' ? 'bg-indigo-600 text-white border-indigo-700 shadow-md shadow-indigo-600/20' : 'bg-white text-slate-700 border-slate-200/80 hover:border-indigo-400' }}">
             <div class="flex items-center justify-between">
-                <span class="text-xs font-bold uppercase tracking-wider {{ $activeTab === 'matching' ? 'text-indigo-100' : 'text-slate-400' }}">4. Smart Matching</span>
-                <i class="fa-solid fa-bolt {{ $activeTab === 'matching' ? 'text-amber-300' : 'text-amber-500' }}"></i>
+                <span class="text-xs font-bold uppercase tracking-wider {{ $activeTab === 'matching' ? 'text-indigo-100' : 'text-slate-400' }}">4. Pencocokan Laporan</span>
+                <i class="fa-solid fa-code-compare {{ $activeTab === 'matching' ? 'text-white' : 'text-indigo-600' }}"></i>
             </div>
             <div class="text-2xl font-black mt-2">{{ $counts['matching'] }} <span class="text-xs font-normal opacity-80">pasang</span></div>
             <span class="text-[10px] mt-1 {{ $activeTab === 'matching' ? 'text-indigo-100' : 'text-slate-400' }}">Potensi barang cocok</span>
@@ -328,7 +328,7 @@
             </div>
         @empty
             <div class="py-12 text-center text-slate-400">
-                <i class="fa-solid fa-wand-magic-sparkles text-4xl text-indigo-300 mb-2 block"></i>
+                <i class="fa-solid fa-circle-info text-4xl text-slate-300 mb-2 block"></i>
                 Tidak ada pasangan barang hilang dan temuan yang memiliki kemiripan tinggi saat ini.
             </div>
         @endforelse

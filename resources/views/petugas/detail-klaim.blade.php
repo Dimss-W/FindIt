@@ -143,7 +143,7 @@
                     <label class="flex items-center gap-3 p-4 rounded-2xl border-2 border-emerald-200 bg-emerald-50/50 cursor-pointer hover:bg-emerald-50 transition-colors">
                         <input type="radio" name="keputusan" value="DISETUJUI" {{ $klaim->status === 'DISETUJUI' ? 'checked' : '' }} required class="w-4 h-4 text-emerald-600 focus:ring-emerald-500">
                         <div>
-                            <div class="text-xs font-bold text-emerald-800">✅ Setujui Klaim</div>
+                            <div class="text-xs font-bold text-emerald-800">Setujui Klaim</div>
                             <div class="text-[11px] text-emerald-600 mt-0.5">Barang sah milik mahasiswa. Status berubah menjadi <strong>SIAP DIAMBIL</strong>.</div>
                         </div>
                     </label>
@@ -151,7 +151,7 @@
                     <label class="flex items-center gap-3 p-4 rounded-2xl border-2 border-rose-200 bg-rose-50/50 cursor-pointer hover:bg-rose-50 transition-colors">
                         <input type="radio" name="keputusan" value="DITOLAK" {{ $klaim->status === 'DITOLAK' ? 'checked' : '' }} required class="w-4 h-4 text-rose-600 focus:ring-rose-500">
                         <div>
-                            <div class="text-xs font-bold text-rose-800">❌ Tolak Klaim</div>
+                            <div class="text-xs font-bold text-rose-800">Tolak Klaim</div>
                             <div class="text-[11px] text-rose-600 mt-0.5">Bukti tidak valid atau tidak cocok. Mahasiswa akan menerima alasan penolakan.</div>
                         </div>
                     </label>

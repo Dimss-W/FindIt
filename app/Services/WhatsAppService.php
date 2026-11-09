@@ -107,12 +107,12 @@ class WhatsAppService
         $kampus = $laporan?->kampus?->nama_kampus ?? 'Kampus UBSI Terdaftar';
         $noTiket = $klaim->kode_klaim ?? ('CLM-' . str_pad($klaim->id, 5, '0', STR_PAD_LEFT));
 
-        $msg = "📢 *PEMBERITAHUAN KLAIM BARANG FINDIT UBSI*\n\n"
+        $msg = "*PEMBERITAHUAN KLAIM BARANG FINDIT UBSI*\n\n"
              . "Halo Sdr/i *{$user->name}* (NIM: {$user->nim}),\n\n"
              . "Klaim Anda untuk barang temuan berikut telah *DISETUJUI* oleh Admin Layanan Kampus:\n"
-             . "📦 *Barang:* {$laporan->nama_barang}\n"
-             . "🏢 *Lokasi Pengambilan:* Ruang Layanan {$kampus}\n"
-             . "🎫 *Kode Tiket Klaim:* *{$noTiket}*\n\n"
+             . "Barang: {$laporan->nama_barang}\n"
+             . "Lokasi Pengambilan: Ruang Layanan {$kampus}\n"
+             . "Kode Tiket Klaim: *{$noTiket}*\n\n"
              . "Silakan datang ke Bagian Layanan Kampus dengan membawa:\n"
              . "1. KTM / KTP Asli untuk verifikasi identitas.\n"
              . "2. Menunjukkan pesan atau Kode Tiket ini kepada petugas.\n\n"
@@ -132,13 +132,13 @@ class WhatsAppService
         }
         $kampus = $laporanTemuan->kampus?->nama_kampus ?? 'Kampus UBSI';
 
-        $msg = "🔍 *NOTIFIKASI KECOCOKAN BARANG HILANG - FINDIT UBSI*\n\n"
+        $msg = "*NOTIFIKASI KECOCOKAN BARANG HILANG - FINDIT UBSI*\n\n"
              . "Halo Sdr/i *{$user->name}*,\n\n"
              . "Sistem FINDIT UBSI mendeteksi ada barang temuan baru dengan tingkat kecocokan *{$score}%* mirip dengan laporan kehilangan Anda:\n"
-             . "📦 *Laporan Anda:* {$laporanHilang->nama_barang}\n"
-             . "✨ *Barang Ditemukan:* {$laporanTemuan->nama_barang}\n"
-             . "🏢 *Kampus:* {$kampus}\n"
-             . "📍 *Lokasi:* {$laporanTemuan->lokasi_kejadian}\n\n"
+             . "Laporan Anda: {$laporanHilang->nama_barang}\n"
+             . "Barang Ditemukan: {$laporanTemuan->nama_barang}\n"
+             . "Kampus: {$kampus}\n"
+             . "Lokasi: {$laporanTemuan->lokasi_kejadian}\n\n"
              . "Silakan buka aplikasi FINDIT UBSI untuk melihat foto dan mengajukan klaim verifikasi kepemilikan.\n\n"
              . "_Sistem Informasi Lost & Found UBSI_";
 
@@ -159,10 +159,10 @@ class WhatsAppService
             return ['success' => false, 'message' => 'User tidak ditemukan'];
         }
 
-        $msg = "✅ *BERITA ACARA SERAH TERIMA BARANG (BAST) - FINDIT UBSI*\n\n"
+        $msg = "*BERITA ACARA SERAH TERIMA BARANG (BAST) - FINDIT UBSI*\n\n"
              . "Halo Sdr/i *{$user->name}*,\n\n"
              . "Barang temuan berupa *{$laporan?->nama_barang}* telah resmi diserahterimakan kepada Anda pada " . date('d/m/Y H:i') . " WIB.\n\n"
-             . "📄 *Nomor BAST Resmi:* *{$noBast}*\n"
+             . "Nomor BAST Resmi: *{$noBast}*\n"
              . "Petugas: " . ($pengembalian->petugas?->name ?? 'Admin Layanan Kampus') . "\n\n"
              . "Terima kasih telah menggunakan sistem FINDIT UBSI. Simpan pesan ini sebagai bukti serah terima sah barang Anda.\n\n"
              . "_Universitas Bina Sarana Informatika_";

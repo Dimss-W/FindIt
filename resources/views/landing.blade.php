@@ -12,7 +12,7 @@
             </div>
 
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/80 border border-blue-200/80 text-brand-ubsi text-xs font-semibold shadow-sm">
-                <i class="fa-solid fa-sparkles text-amber-500"></i>
+                <i class="fa-solid fa-shield-halved text-brand-ubsi"></i>
                 <span>Platform Resmi Pengelolaan Barang Hilang & Ditemukan UBSI</span>
             </div>
 
@@ -168,8 +168,8 @@
                     3
                 </div>
                 <h3 class="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
-                    <span>Smart Match</span>
-                    <i class="fa-solid fa-bolt text-indigo-500 text-xs"></i>
+                    <span>Pencocokan Sistem</span>
+                    <i class="fa-solid fa-code-compare text-indigo-500 text-xs"></i>
                 </h3>
                 <p class="text-xs text-slate-500 leading-relaxed">
                     Sistem otomatis menghitung kecocokan berbasis bobot kampus, kategori, nama, lokasi, dan tanggal.

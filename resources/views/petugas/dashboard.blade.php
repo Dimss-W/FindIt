@@ -25,8 +25,8 @@
                 <span>Verifikasi Barang Masuk</span>
             </a>
             <a href="{{ route('petugas.smart.matching') }}" class="px-5 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-lg shadow-indigo-600/20 transition-all flex items-center gap-2">
-                <i class="fa-solid fa-bolt text-amber-300"></i>
-                <span>Smart Matching</span>
+                <i class="fa-solid fa-code-compare text-white"></i>
+                <span>Pencocokan Laporan</span>
             </a>
         </div>
     </div>
